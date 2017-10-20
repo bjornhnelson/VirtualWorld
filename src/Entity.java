@@ -232,14 +232,14 @@ final class Entity
               actionPeriod);
    }
 
-   public Action createAnimationAction(int repeatCount)
+   public AnimationAction createAnimationAction(int repeatCount)
    {
-      return new Action(ActionKind.ANIMATION, this, null, null, repeatCount);
+      return new AnimationAction(this, null, null, repeatCount);
    }
 
-   private Action createActivityAction(WorldModel world, ImageStore imageStore)
+   private ActivityAction createActivityAction(WorldModel world, ImageStore imageStore)
    {
-      return new Action(ActionKind.ACTIVITY, this, world, imageStore, 0);
+      return new ActivityAction(this, world, imageStore, 0);
    }
 
    public static Entity createMinerFull(String id, int resourceLimit,

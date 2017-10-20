@@ -1,5 +1,0 @@
-enum ActionKind
-{
-   ACTIVITY,
-   ANIMATION
-}
