@@ -12,6 +12,12 @@ public class Ore implements Dynamic {
     private static final int BLOB_ANIMATION_MIN = 50;
     private static final int BLOB_ANIMATION_MAX = 150;
 
+    private static final String ORE_KEY = "ore";
+    private static final int ORE_NUM_PROPERTIES = 5;
+    private static final int ORE_ID = 1;
+    private static final int ORE_COL = 2;
+    private static final int ORE_ROW = 3;
+    private static final int ORE_ACTION_PERIOD = 4;
 
     private String id;
     private Point position;
@@ -93,6 +99,21 @@ public class Ore implements Dynamic {
 
         world.addEntity(blob);
         blob.scheduleActions(scheduler, world, imageStore);
+    }
+
+    public static boolean parseOre(String [] properties, WorldModel world, ImageStore imageStore)
+    {
+        if (properties.length == ORE_NUM_PROPERTIES)
+        {
+            Point pt = new Point(Integer.parseInt(properties[ORE_COL]),
+                    Integer.parseInt(properties[ORE_ROW]));
+            Ore entity = createOre(properties[ORE_ID],
+                    pt, Integer.parseInt(properties[ORE_ACTION_PERIOD]),
+                    imageStore.getImageList(ORE_KEY));
+            entity.tryAddEntity(world);
+        }
+
+        return properties.length == ORE_NUM_PROPERTIES;
     }
 
 }

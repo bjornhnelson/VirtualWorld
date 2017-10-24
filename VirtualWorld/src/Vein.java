@@ -12,6 +12,13 @@ public class Vein implements Dynamic {
     private static final int ORE_CORRUPT_MAX = 30000;
     private static final String ORE_KEY = "ore";
 
+    private static final String VEIN_KEY = "vein";
+    private static final int VEIN_NUM_PROPERTIES = 5;
+    private static final int VEIN_ID = 1;
+    private static final int VEIN_COL = 2;
+    private static final int VEIN_ROW = 3;
+    private static final int VEIN_ACTION_PERIOD = 4;
+
     private String id;
     private Point position;
     private List<PImage> images;
@@ -93,6 +100,22 @@ public class Vein implements Dynamic {
         scheduler.scheduleEvent(this,
                 createActivityAction(world, imageStore),
                 actionPeriod);
+    }
+
+    public static boolean parseVein(String [] properties, WorldModel world, ImageStore imageStore)
+    {
+        if (properties.length == VEIN_NUM_PROPERTIES)
+        {
+            Point pt = new Point(Integer.parseInt(properties[VEIN_COL]),
+                    Integer.parseInt(properties[VEIN_ROW]));
+            Vein entity = createVein(properties[VEIN_ID],
+                    pt,
+                    Integer.parseInt(properties[VEIN_ACTION_PERIOD]),
+                    imageStore.getImageList(VEIN_KEY));
+            entity.tryAddEntity(world);
+        }
+
+        return properties.length == VEIN_NUM_PROPERTIES;
     }
 
 }
