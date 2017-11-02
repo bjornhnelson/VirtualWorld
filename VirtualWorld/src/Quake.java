@@ -1,7 +1,7 @@
 import java.util.List;
 import processing.core.PImage;
 
-public class Quake extends AnimatedObjects implements Animated {
+public class Quake extends AnimatedObjects {
 
     private static final String QUAKE_ID = "quake";
     private static final int QUAKE_ACTION_PERIOD = 1100;

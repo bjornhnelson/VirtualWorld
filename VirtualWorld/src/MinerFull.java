@@ -2,7 +2,7 @@ import java.util.List;
 import processing.core.PImage;
 import java.util.Optional;
 
-public class MinerFull extends AnimatedObjects implements Animated {
+public class MinerFull extends AnimatedObjects {
 
     private int resourceLimit;
 

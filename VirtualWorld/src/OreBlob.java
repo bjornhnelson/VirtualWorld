@@ -2,7 +2,7 @@ import java.util.List;
 import processing.core.PImage;
 import java.util.Optional;
 
-public class OreBlob extends AnimatedObjects implements Animated {
+public class OreBlob extends AnimatedObjects {
 
     private static final String QUAKE_KEY = "quake";
 
