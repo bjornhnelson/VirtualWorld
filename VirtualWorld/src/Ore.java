@@ -2,7 +2,7 @@ import java.util.List;
 import processing.core.PImage;
 import java.util.Random;
 
-public class Ore extends EntityObjects implements Dynamic {
+public class Ore extends DynamicObjects {
 
     private static final Random rand = new Random();
 
@@ -19,13 +19,10 @@ public class Ore extends EntityObjects implements Dynamic {
     private static final int ORE_ROW = 3;
     private static final int ORE_ACTION_PERIOD = 4;
 
-    private int actionPeriod;
-
     public Ore(String id, Point position,
-               List<PImage> images, int actionPeriod, int animationPeriod)
+               List<PImage> images, int actionPeriod)
     {
-        super(id, position, images);
-        this.actionPeriod = actionPeriod;
+        super(id, position, images, actionPeriod);
     }
 
     public void tryAddEntity(WorldModel world)
@@ -42,20 +39,14 @@ public class Ore extends EntityObjects implements Dynamic {
 
     public static Ore createOre(String id, Point position, int actionPeriod, List<PImage> images)
     {
-        return new Ore(id, position, images, actionPeriod, 0);
-    }
-
-    public ActivityAction createActivityAction(WorldModel world, ImageStore imageStore)
-    {
-        return new ActivityAction(this, world, imageStore, 0);
+        return new Ore(id, position, images, actionPeriod);
     }
 
     public void scheduleActions(EventScheduler scheduler, WorldModel world, ImageStore imageStore) {
 
         scheduler.scheduleEvent(this,
                 createActivityAction(world, imageStore),
-                actionPeriod);
-
+                getActionPeriod());
     }
 
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)
@@ -66,7 +57,7 @@ public class Ore extends EntityObjects implements Dynamic {
         scheduler.unscheduleAllEvents(this);
 
         OreBlob blob = OreBlob.createOreBlob(getId() + BLOB_ID_SUFFIX,
-                pos, actionPeriod / BLOB_PERIOD_SCALE,
+                pos, getActionPeriod() / BLOB_PERIOD_SCALE,
                 BLOB_ANIMATION_MIN +
                         rand.nextInt(BLOB_ANIMATION_MAX - BLOB_ANIMATION_MIN),
                 imageStore.getImageList(BLOB_KEY));

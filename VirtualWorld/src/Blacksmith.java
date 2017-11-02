@@ -1,7 +1,7 @@
 import java.util.List;
 import processing.core.PImage;
 
-public class Blacksmith extends EntityObjects{
+public class Blacksmith extends EntityObjects {
 
     private static final String SMITH_KEY = "blacksmith";
     private static final int SMITH_NUM_PROPERTIES = 4;

@@ -3,7 +3,7 @@ import processing.core.PImage;
 import java.util.Optional;
 import java.util.Random;
 
-public class Vein extends EntityObjects implements Dynamic {
+public class Vein extends DynamicObjects {
 
     private static final Random rand = new Random();
 
@@ -19,12 +19,9 @@ public class Vein extends EntityObjects implements Dynamic {
     private static final int VEIN_ROW = 3;
     private static final int VEIN_ACTION_PERIOD = 4;
 
-    private int actionPeriod;
-
     public Vein(String id, Point position, List<PImage> images, int actionPeriod)
     {
-        super(id, position, images);
-        this.actionPeriod = actionPeriod;
+        super(id, position, images, actionPeriod);
     }
 
     public void tryAddEntity(WorldModel world)
@@ -53,7 +50,7 @@ public class Vein extends EntityObjects implements Dynamic {
 
         scheduler.scheduleEvent(this,
                 createActivityAction(world, imageStore),
-                actionPeriod);
+                getActionPeriod());
 
     }
 
@@ -73,7 +70,7 @@ public class Vein extends EntityObjects implements Dynamic {
 
         scheduler.scheduleEvent(this,
                 createActivityAction(world, imageStore),
-                actionPeriod);
+                getActionPeriod());
     }
 
     public static boolean parseVein(String [] properties, WorldModel world, ImageStore imageStore)

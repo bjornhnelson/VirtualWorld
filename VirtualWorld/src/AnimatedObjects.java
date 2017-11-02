@@ -1,7 +1,7 @@
 import java.util.List;
 import processing.core.PImage;
 
-public abstract class AnimatedObjects extends EntityObjects implements Animated {
+public abstract class AnimatedObjects extends DynamicObjects implements Animated {
 
     private int actionPeriod;
     private int animationPeriod;
@@ -9,18 +9,13 @@ public abstract class AnimatedObjects extends EntityObjects implements Animated 
     public AnimatedObjects(String id, Point position,
                      List<PImage> images, int actionPeriod, int animationPeriod)
     {
-        super(id, position, images);
-        this.actionPeriod = actionPeriod;
+        super(id, position, images, actionPeriod);
         this.animationPeriod = animationPeriod;
 
     }
     public void nextImage() {
-        int index = (super.getImageIndex() + 1) % super.getImages().size();
-        super.setImageIndex(index);
-    }
-
-    public int getActionPeriod() {
-        return actionPeriod;
+        int index = (getImageIndex() + 1) % getImages().size();
+        setImageIndex(index);
     }
 
     public int getAnimationPeriod() {
