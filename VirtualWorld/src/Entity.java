@@ -10,5 +10,6 @@ public interface Entity {
     Point getPosition();
     void setPosition(Point pos);
     PImage getCurrentImage();
+    void tryAddEntity(WorldModel world);
 
 }

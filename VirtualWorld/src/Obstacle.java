@@ -14,18 +14,6 @@ public class Obstacle extends EntityObjects {
         super(id, position, images);
     }
 
-    public void tryAddEntity(WorldModel world)
-    {
-        if (world.isOccupied(getPosition()))
-        {
-            // arguably the wrong type of exception, but we are not
-            // defining our own exceptions yet
-            throw new IllegalArgumentException("position occupied");
-        }
-
-        world.addEntity(this);
-    }
-
     public static Obstacle createObstacle(String id, Point position, List<PImage> images)
     {
         return new Obstacle(id, position, images);

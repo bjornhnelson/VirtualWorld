@@ -25,18 +25,6 @@ public class MinerNotFull extends AnimatedObjects {
         this.resourceCount = resourceCount;
     }
 
-    public void tryAddEntity(WorldModel world)
-    {
-        if (world.isOccupied(getPosition()))
-        {
-            // arguably the wrong type of exception, but we are not
-            // defining our own exceptions yet
-            throw new IllegalArgumentException("position occupied");
-        }
-
-        world.addEntity(this);
-    }
-
     public static MinerNotFull createMinerNotFull(String id, int resourceLimit,
                                                   Point position, int actionPeriod, int animationPeriod,
                                                   List<PImage> images)

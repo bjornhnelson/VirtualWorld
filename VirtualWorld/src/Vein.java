@@ -24,18 +24,6 @@ public class Vein extends DynamicObjects {
         super(id, position, images, actionPeriod);
     }
 
-    public void tryAddEntity(WorldModel world)
-    {
-        if (world.isOccupied(getPosition()))
-        {
-            // arguably the wrong type of exception, but we are not
-            // defining our own exceptions yet
-            throw new IllegalArgumentException("position occupied");
-        }
-
-        world.addEntity(this);
-    }
-
     public static Vein createVein(String id, Point position, int actionPeriod, List<PImage> images)
     {
         return new Vein(id, position, images, actionPeriod);

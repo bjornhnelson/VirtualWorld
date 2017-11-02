@@ -14,18 +14,6 @@ public class Blacksmith extends EntityObjects {
         super(id, position, images);
     }
 
-    public void tryAddEntity(WorldModel world)
-    {
-        if (world.isOccupied(this.getPosition()))
-        {
-            // arguably the wrong type of exception, but we are not
-            // defining our own exceptions yet
-            throw new IllegalArgumentException("position occupied");
-        }
-
-        world.addEntity(this);
-    }
-
     public static Blacksmith createBlacksmith(String id, Point position, List<PImage> images)
     {
         return new Blacksmith(id, position, images);
