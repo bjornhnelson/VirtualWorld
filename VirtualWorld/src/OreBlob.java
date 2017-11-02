@@ -17,11 +17,6 @@ public class OreBlob extends AnimatedObjects {
         return new OreBlob(id, position, images, actionPeriod, animationPeriod);
     }
 
-    public ActivityAction createActivityAction(WorldModel world, ImageStore imageStore)
-    {
-        return new ActivityAction(this, world, imageStore, 0);
-    }
-
     public void scheduleActions(EventScheduler scheduler, WorldModel world, ImageStore imageStore) {
         scheduler.scheduleEvent(this,
                 createActivityAction(world, imageStore),

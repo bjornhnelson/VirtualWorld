@@ -18,11 +18,6 @@ public class Quake extends AnimatedObjects {
         return new Quake(QUAKE_ID, position, images, QUAKE_ACTION_PERIOD, QUAKE_ANIMATION_PERIOD);
     }
 
-    public ActivityAction createActivityAction(WorldModel world, ImageStore imageStore)
-    {
-        return new ActivityAction(this, world, imageStore, 0);
-    }
-
     public void scheduleActions(EventScheduler scheduler, WorldModel world, ImageStore imageStore) {
 
         scheduler.scheduleEvent(this,

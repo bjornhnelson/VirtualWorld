@@ -18,12 +18,7 @@ public class MinerFull extends AnimatedObjects {
     {
         return new MinerFull(id, position, images, resourceLimit, actionPeriod, animationPeriod);
     }
-
-    public ActivityAction createActivityAction(WorldModel world, ImageStore imageStore)
-    {
-        return new ActivityAction(this, world, imageStore, 0);
-    }
-
+    
     public void scheduleActions(EventScheduler scheduler, WorldModel world, ImageStore imageStore) {
 
         scheduler.scheduleEvent(this,
