@@ -45,5 +45,4 @@ abstract class EntityObjects implements Entity {
         return images.get(imageIndex);
     }
 
-
 }

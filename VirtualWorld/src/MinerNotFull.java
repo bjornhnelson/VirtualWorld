@@ -2,7 +2,7 @@ import java.util.List;
 import processing.core.PImage;
 import java.util.Optional;
 
-public class MinerNotFull extends AnimatedObjects {
+public class MinerNotFull extends AnimatedObjects implements Animated {
 
     private static final String MINER_KEY = "miner";
     private static final int MINER_NUM_PROPERTIES = 7;
@@ -13,47 +13,21 @@ public class MinerNotFull extends AnimatedObjects {
     private static final int MINER_ACTION_PERIOD = 5;
     private static final int MINER_ANIMATION_PERIOD = 6;
 
-    private String id;
-    private Point position;
-    private List<PImage> images;
-    private int imageIndex;
     private int resourceLimit;
     private int resourceCount;
-    private int actionPeriod;
-    private int animationPeriod;
 
     public MinerNotFull(String id, Point position,
                           List<PImage> images, int resourceLimit, int resourceCount,
                           int actionPeriod, int animationPeriod)
     {
-        super(id, position, images, resourceLimit, resourceCount, actionPeriod, animationPeriod);
-    }
-
-    public Point getPosition() {
-        return position;
-    }
-
-    public void setPosition(Point pos) {
-        position = pos;
-    }
-
-    public int getAnimationPeriod() {
-        return animationPeriod;
-    }
-
-    public void nextImage()
-    {
-        imageIndex = (imageIndex + 1) % images.size();
-    }
-
-    public PImage getCurrentImage()
-    {
-        return images.get(imageIndex);
+        super(id, position, images, actionPeriod, animationPeriod);
+        this.resourceLimit = resourceLimit;
+        this.resourceCount = resourceCount;
     }
 
     public void tryAddEntity(WorldModel world)
     {
-        if (world.isOccupied(position))
+        if (world.isOccupied(super.getPosition()))
         {
             // arguably the wrong type of exception, but we are not
             // defining our own exceptions yet
@@ -85,7 +59,7 @@ public class MinerNotFull extends AnimatedObjects {
 
         scheduler.scheduleEvent(this,
                 createActivityAction(world, imageStore),
-                actionPeriod);
+                super.getActionPeriod());
         scheduler.scheduleEvent(this,
                 createAnimationAction(0), getAnimationPeriod());
 
@@ -93,7 +67,7 @@ public class MinerNotFull extends AnimatedObjects {
 
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)
     {
-        Optional<Entity> notFullTarget = world.findNearest(position, Ore.class);
+        Optional<Entity> notFullTarget = world.findNearest(super.getPosition(), Ore.class);
 
         if (!notFullTarget.isPresent() ||
                 !moveToNotFull(world, notFullTarget.get(), scheduler) ||
@@ -101,13 +75,13 @@ public class MinerNotFull extends AnimatedObjects {
         {
             scheduler.scheduleEvent(this,
                     createActivityAction(world, imageStore),
-                    actionPeriod);
+                    super.getActionPeriod());
         }
     }
 
     private boolean moveToNotFull(WorldModel world, Entity target, EventScheduler scheduler)
     {
-        if (position.adjacent(target.getPosition()))
+        if (super.getPosition().adjacent(target.getPosition()))
         {
             resourceCount += 1;
             world.removeEntity(target);
@@ -119,7 +93,7 @@ public class MinerNotFull extends AnimatedObjects {
         {
             Point nextPos = nextPositionMiner(world, target.getPosition());
 
-            if (!position.equals(nextPos))
+            if (!super.getPosition().equals(nextPos))
             {
                 Optional<Entity> occupant = world.getOccupant(nextPos);
                 if (occupant.isPresent())
@@ -137,7 +111,7 @@ public class MinerNotFull extends AnimatedObjects {
     {
         if (resourceCount >= resourceLimit)
         {
-            MinerFull miner = MinerFull.createMinerFull(id, resourceLimit, position, actionPeriod, animationPeriod, images);
+            MinerFull miner = MinerFull.createMinerFull(super.getId(), resourceLimit, super.getPosition(), super.getActionPeriod(), super.getAnimationPeriod(), super.getImages());
 
             world.removeEntity(this);
             scheduler.unscheduleAllEvents(this);
@@ -153,19 +127,19 @@ public class MinerNotFull extends AnimatedObjects {
 
     private Point nextPositionMiner(WorldModel world, Point destPos)
     {
-        int horiz = Integer.signum(destPos.x - position.x);
-        Point newPos = new Point(position.x + horiz,
-                position.y);
+        int horiz = Integer.signum(destPos.x - super.getPosition().x);
+        Point newPos = new Point(super.getPosition().x + horiz,
+                super.getPosition().y);
 
         if (horiz == 0 || world.isOccupied(newPos))
         {
-            int vert = Integer.signum(destPos.y - position.y);
-            newPos = new Point(position.x,
-                    position.y + vert);
+            int vert = Integer.signum(destPos.y - super.getPosition().y);
+            newPos = new Point(super.getPosition().x,
+                    super.getPosition().y + vert);
 
             if (vert == 0 || world.isOccupied(newPos))
             {
-                newPos = position;
+                newPos = super.getPosition();
             }
         }
 

@@ -2,45 +2,18 @@ import java.util.List;
 import processing.core.PImage;
 import java.util.Optional;
 
-public class MinerFull extends AnimatedObjects {
+public class MinerFull extends AnimatedObjects implements Animated {
 
-    private String id;
-    private Point position;
-    private List<PImage> images;
-    private int imageIndex;
     private int resourceLimit;
-    private int actionPeriod;
-    private int animationPeriod;
 
     public MinerFull(String id, Point position,
                       List<PImage> images, int resourceLimit, int actionPeriod, int animationPeriod)
     {
-        super(id, position, images, resourceLimit, resourceLimit, actionPeriod, animationPeriod);
+        super(id, position, images, actionPeriod, animationPeriod);
+        this.resourceLimit = resourceLimit;
     }
 
-    public Point getPosition() {
-        return position;
-    }
-
-    public void setPosition(Point pos) {
-        position = pos;
-    }
-
-    public int getAnimationPeriod() {
-        return animationPeriod;
-    }
-
-    public void nextImage()
-    {
-        imageIndex = (imageIndex + 1) % images.size();
-    }
-
-    public PImage getCurrentImage()
-    {
-        return images.get(imageIndex);
-    }
-
-    public static MinerFull createMinerFull(String id, int resourceLimit,
+      public static MinerFull createMinerFull(String id, int resourceLimit,
                                             Point position, int actionPeriod, int animationPeriod, List<PImage> images)
     {
         return new MinerFull(id, position, images, resourceLimit, actionPeriod, animationPeriod);
@@ -60,14 +33,14 @@ public class MinerFull extends AnimatedObjects {
 
         scheduler.scheduleEvent(this,
                 createActivityAction(world, imageStore),
-                actionPeriod);
+                super.getActionPeriod());
         scheduler.scheduleEvent(this, createAnimationAction(0),
                 getAnimationPeriod());
     }
 
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)
     {
-        Optional<Entity> fullTarget = world.findNearest(position, Blacksmith.class);
+        Optional<Entity> fullTarget = world.findNearest(super.getPosition(), Blacksmith.class);
 
         if (fullTarget.isPresent() &&
                 moveToFull(world, fullTarget.get(), scheduler))
@@ -78,13 +51,13 @@ public class MinerFull extends AnimatedObjects {
         {
             scheduler.scheduleEvent(this,
                     createActivityAction(world, imageStore),
-                    actionPeriod);
+                    super.getActionPeriod());
         }
     }
 
     private boolean moveToFull(WorldModel world, Entity target, EventScheduler scheduler)
     {
-        if (position.adjacent(target.getPosition()))
+        if (super.getPosition().adjacent(target.getPosition()))
         {
             return true;
         }
@@ -92,7 +65,7 @@ public class MinerFull extends AnimatedObjects {
         {
             Point nextPos = nextPositionMiner(world, target.getPosition());
 
-            if (!position.equals(nextPos))
+            if (!super.getPosition().equals(nextPos))
             {
                 Optional<Entity> occupant = world.getOccupant(nextPos);
                 if (occupant.isPresent())
@@ -108,7 +81,7 @@ public class MinerFull extends AnimatedObjects {
 
     private void transformFull(WorldModel world, EventScheduler scheduler, ImageStore imageStore)
     {
-        MinerNotFull miner = MinerNotFull.createMinerNotFull(id, resourceLimit, position, actionPeriod, animationPeriod, images);
+        MinerNotFull miner = MinerNotFull.createMinerNotFull(super.getId(), resourceLimit, super.getPosition(), super.getActionPeriod(), super.getAnimationPeriod(), super.getImages());
 
         world.removeEntity(this);
         scheduler.unscheduleAllEvents(this);
@@ -119,18 +92,18 @@ public class MinerFull extends AnimatedObjects {
 
     private Point nextPositionMiner(WorldModel world, Point destPos)
     {
-        int horiz = Integer.signum(destPos.x - position.x);
-        Point newPos = new Point(position.x + horiz,
-                position.y);
+        int horiz = Integer.signum(destPos.x - super.getPosition().x);
+        Point newPos = new Point(super.getPosition().x + horiz,
+                super.getPosition().y);
 
         if (horiz == 0 || world.isOccupied(newPos))
         {
-            int vert = Integer.signum(destPos.y - position.y);
-            newPos = new Point(position.x, position.y + vert);
+            int vert = Integer.signum(destPos.y - super.getPosition().y);
+            newPos = new Point(super.getPosition().x, super.getPosition().y + vert);
 
             if (vert == 0 || world.isOccupied(newPos))
             {
-                newPos = position;
+                newPos = super.getPosition();
             }
         }
 
