@@ -40,7 +40,6 @@ public class MinerNotFull extends AnimatedObjects {
                 getActionPeriod());
         scheduler.scheduleEvent(this,
                 createAnimationAction(0), getAnimationPeriod());
-
     }
 
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)

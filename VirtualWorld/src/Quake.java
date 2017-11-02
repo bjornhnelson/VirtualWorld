@@ -26,7 +26,6 @@ public class Quake extends AnimatedObjects {
         scheduler.scheduleEvent(this,
                 createAnimationAction(QUAKE_ANIMATION_REPEAT_COUNT),
                 getAnimationPeriod());
-
     }
 
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)

@@ -34,7 +34,6 @@ public class Vein extends DynamicObjects {
         scheduler.scheduleEvent(this,
                 createActivityAction(world, imageStore),
                 getActionPeriod());
-
     }
 
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)
