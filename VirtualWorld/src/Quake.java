@@ -23,16 +23,11 @@ public class Quake extends AnimatedObjects implements Animated {
         return new ActivityAction(this, world, imageStore, 0);
     }
 
-    public AnimationAction createAnimationAction(int repeatCount)
-    {
-        return new AnimationAction(this, null, null, repeatCount);
-    }
-
     public void scheduleActions(EventScheduler scheduler, WorldModel world, ImageStore imageStore) {
 
         scheduler.scheduleEvent(this,
                 createActivityAction(world, imageStore),
-                super.getActionPeriod());
+                getActionPeriod());
         scheduler.scheduleEvent(this,
                 createAnimationAction(QUAKE_ANIMATION_REPEAT_COUNT),
                 getAnimationPeriod());

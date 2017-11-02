@@ -16,7 +16,7 @@ public class Obstacle extends EntityObjects {
 
     public void tryAddEntity(WorldModel world)
     {
-        if (world.isOccupied(super.getPosition()))
+        if (world.isOccupied(getPosition()))
         {
             // arguably the wrong type of exception, but we are not
             // defining our own exceptions yet

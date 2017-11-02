@@ -22,15 +22,10 @@ public class OreBlob extends AnimatedObjects implements Animated {
         return new ActivityAction(this, world, imageStore, 0);
     }
 
-    public AnimationAction createAnimationAction(int repeatCount)
-    {
-        return new AnimationAction(this, null, null, repeatCount);
-    }
-
     public void scheduleActions(EventScheduler scheduler, WorldModel world, ImageStore imageStore) {
         scheduler.scheduleEvent(this,
                 createActivityAction(world, imageStore),
-                super.getActionPeriod());
+                getActionPeriod());
         scheduler.scheduleEvent(this,
                 createAnimationAction(0), getAnimationPeriod());
     }
@@ -38,8 +33,8 @@ public class OreBlob extends AnimatedObjects implements Animated {
 
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)
     {
-        Optional<Entity> blobTarget = world.findNearest(super.getPosition(), Vein.class);  // check!
-        long nextPeriod = super.getActionPeriod();
+        Optional<Entity> blobTarget = world.findNearest(getPosition(), Vein.class);  // check!
+        long nextPeriod = getActionPeriod();
 
         if (blobTarget.isPresent())
         {
@@ -51,7 +46,7 @@ public class OreBlob extends AnimatedObjects implements Animated {
                         imageStore.getImageList(QUAKE_KEY));
 
                 world.addEntity(quake);
-                nextPeriod += super.getActionPeriod();
+                nextPeriod += getActionPeriod();
                 quake.scheduleActions(scheduler, world, imageStore);
             }
         }
@@ -61,7 +56,7 @@ public class OreBlob extends AnimatedObjects implements Animated {
 
     private boolean moveToOreBlob(WorldModel world, Entity target, EventScheduler scheduler)
     {
-        if (super.getPosition().adjacent(target.getPosition()))
+        if (getPosition().adjacent(target.getPosition()))
         {
             world.removeEntity(target);
             scheduler.unscheduleAllEvents(target);
@@ -71,7 +66,7 @@ public class OreBlob extends AnimatedObjects implements Animated {
         {
             Point nextPos = nextPositionOreBlob(world, target.getPosition());
 
-            if (!super.getPosition().equals(nextPos))
+            if (!getPosition().equals(nextPos))
             {
                 Optional<Entity> occupant = world.getOccupant(nextPos);
                 if (occupant.isPresent())
@@ -87,23 +82,23 @@ public class OreBlob extends AnimatedObjects implements Animated {
 
     private Point nextPositionOreBlob(WorldModel world, Point destPos)
     {
-        int horiz = Integer.signum(destPos.x - super.getPosition().x);
-        Point newPos = new Point(super.getPosition().x + horiz,
-                super.getPosition().y);
+        int horiz = Integer.signum(destPos.x - getPosition().x);
+        Point newPos = new Point(getPosition().x + horiz,
+                getPosition().y);
 
         Optional<Entity> occupant = world.getOccupant(newPos);
 
         if (horiz == 0 ||
                 (occupant.isPresent() && !(occupant.get() instanceof Ore)))
         {
-            int vert = Integer.signum(destPos.y - super.getPosition().y);
-            newPos = new Point(super.getPosition().x, super.getPosition().y + vert);
+            int vert = Integer.signum(destPos.y - getPosition().y);
+            newPos = new Point(getPosition().x, getPosition().y + vert);
             occupant = world.getOccupant(newPos);
 
             if (vert == 0 ||
                     (occupant.isPresent() && !(occupant.get() instanceof Ore)))
             {
-                newPos = super.getPosition();
+                newPos = getPosition();
             }
         }
 

@@ -2,7 +2,7 @@ import java.util.List;
 import processing.core.PImage;
 import java.util.Optional;
 
-public class MinerNotFull extends AnimatedObjects implements Animated {
+public class MinerNotFull extends AnimatedObjects {
 
     private static final String MINER_KEY = "miner";
     private static final int MINER_NUM_PROPERTIES = 7;
@@ -27,7 +27,7 @@ public class MinerNotFull extends AnimatedObjects implements Animated {
 
     public void tryAddEntity(WorldModel world)
     {
-        if (world.isOccupied(super.getPosition()))
+        if (world.isOccupied(getPosition()))
         {
             // arguably the wrong type of exception, but we are not
             // defining our own exceptions yet
@@ -50,16 +50,11 @@ public class MinerNotFull extends AnimatedObjects implements Animated {
         return new ActivityAction(this, world, imageStore, 0);
     }
 
-    public AnimationAction createAnimationAction(int repeatCount)
-    {
-        return new AnimationAction(this, null, null, repeatCount);
-    }
-
     public void scheduleActions(EventScheduler scheduler, WorldModel world, ImageStore imageStore) {
 
         scheduler.scheduleEvent(this,
                 createActivityAction(world, imageStore),
-                super.getActionPeriod());
+                getActionPeriod());
         scheduler.scheduleEvent(this,
                 createAnimationAction(0), getAnimationPeriod());
 
@@ -67,7 +62,7 @@ public class MinerNotFull extends AnimatedObjects implements Animated {
 
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)
     {
-        Optional<Entity> notFullTarget = world.findNearest(super.getPosition(), Ore.class);
+        Optional<Entity> notFullTarget = world.findNearest(getPosition(), Ore.class);
 
         if (!notFullTarget.isPresent() ||
                 !moveToNotFull(world, notFullTarget.get(), scheduler) ||
@@ -75,13 +70,13 @@ public class MinerNotFull extends AnimatedObjects implements Animated {
         {
             scheduler.scheduleEvent(this,
                     createActivityAction(world, imageStore),
-                    super.getActionPeriod());
+                    getActionPeriod());
         }
     }
 
     private boolean moveToNotFull(WorldModel world, Entity target, EventScheduler scheduler)
     {
-        if (super.getPosition().adjacent(target.getPosition()))
+        if (getPosition().adjacent(target.getPosition()))
         {
             resourceCount += 1;
             world.removeEntity(target);
@@ -93,7 +88,7 @@ public class MinerNotFull extends AnimatedObjects implements Animated {
         {
             Point nextPos = nextPositionMiner(world, target.getPosition());
 
-            if (!super.getPosition().equals(nextPos))
+            if (!getPosition().equals(nextPos))
             {
                 Optional<Entity> occupant = world.getOccupant(nextPos);
                 if (occupant.isPresent())
@@ -111,7 +106,7 @@ public class MinerNotFull extends AnimatedObjects implements Animated {
     {
         if (resourceCount >= resourceLimit)
         {
-            MinerFull miner = MinerFull.createMinerFull(super.getId(), resourceLimit, super.getPosition(), super.getActionPeriod(), super.getAnimationPeriod(), super.getImages());
+            MinerFull miner = MinerFull.createMinerFull(getId(), resourceLimit, getPosition(), getActionPeriod(), getAnimationPeriod(), getImages());
 
             world.removeEntity(this);
             scheduler.unscheduleAllEvents(this);
@@ -127,19 +122,19 @@ public class MinerNotFull extends AnimatedObjects implements Animated {
 
     private Point nextPositionMiner(WorldModel world, Point destPos)
     {
-        int horiz = Integer.signum(destPos.x - super.getPosition().x);
-        Point newPos = new Point(super.getPosition().x + horiz,
-                super.getPosition().y);
+        int horiz = Integer.signum(destPos.x - getPosition().x);
+        Point newPos = new Point(getPosition().x + horiz,
+                getPosition().y);
 
         if (horiz == 0 || world.isOccupied(newPos))
         {
-            int vert = Integer.signum(destPos.y - super.getPosition().y);
-            newPos = new Point(super.getPosition().x,
-                    super.getPosition().y + vert);
+            int vert = Integer.signum(destPos.y - getPosition().y);
+            newPos = new Point(getPosition().x,
+                    getPosition().y + vert);
 
             if (vert == 0 || world.isOccupied(newPos))
             {
-                newPos = super.getPosition();
+                newPos = getPosition();
             }
         }
 

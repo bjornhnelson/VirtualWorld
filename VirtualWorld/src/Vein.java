@@ -29,7 +29,7 @@ public class Vein extends EntityObjects implements Dynamic {
 
     public void tryAddEntity(WorldModel world)
     {
-        if (world.isOccupied(super.getPosition()))
+        if (world.isOccupied(getPosition()))
         {
             // arguably the wrong type of exception, but we are not
             // defining our own exceptions yet
@@ -59,11 +59,11 @@ public class Vein extends EntityObjects implements Dynamic {
 
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)
     {
-        Optional<Point> openPt = world.findOpenAround(super.getPosition());
+        Optional<Point> openPt = world.findOpenAround(getPosition());
 
         if (openPt.isPresent())
         {
-            Ore ore = Ore.createOre(ORE_ID_PREFIX + super.getId(),
+            Ore ore = Ore.createOre(ORE_ID_PREFIX + getId(),
                     openPt.get(), ORE_CORRUPT_MIN +
                             rand.nextInt(ORE_CORRUPT_MAX - ORE_CORRUPT_MIN),
                     imageStore.getImageList(ORE_KEY));
