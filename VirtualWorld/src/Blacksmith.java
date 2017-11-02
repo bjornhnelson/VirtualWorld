@@ -1,7 +1,7 @@
 import java.util.List;
 import processing.core.PImage;
 
-public class Blacksmith implements Entity {
+public class Blacksmith extends EntityObjects {
 
     private static final String SMITH_KEY = "blacksmith";
     private static final int SMITH_NUM_PROPERTIES = 4;
@@ -9,41 +9,14 @@ public class Blacksmith implements Entity {
     private static final int SMITH_COL = 2;
     private static final int SMITH_ROW = 3;
 
-    private String id;
-    private Point position;
-    private List<PImage> images;
-    private int imageIndex;
-    private int animationPeriod;
-
-    public Blacksmith(String id, Point position, List<PImage> images, int animationPeriod)
+    public Blacksmith(String id, Point position, List<PImage> images)
     {
-        this.id = id;
-        this.position = position;
-        this.images = images;
-        this.imageIndex = 0;
-        this.animationPeriod = animationPeriod;
-    }
-
-    public Point getPosition() {
-        return position;
-    }
-
-    public void setPosition(Point pos) {
-        position = pos;
-    }
-
-    public int getAnimationPeriod() {
-        return animationPeriod;
-    }
-
-    public PImage getCurrentImage()
-    {
-        return images.get(imageIndex);
+        super(id, position, images);
     }
 
     public void tryAddEntity(WorldModel world)
     {
-        if (world.isOccupied(position))
+        if (world.isOccupied(this.getPosition()))
         {
             // arguably the wrong type of exception, but we are not
             // defining our own exceptions yet
@@ -55,7 +28,7 @@ public class Blacksmith implements Entity {
 
     public static Blacksmith createBlacksmith(String id, Point position, List<PImage> images)
     {
-        return new Blacksmith(id, position, images, 0);
+        return new Blacksmith(id, position, images);
     }
 
     public static boolean parseSmith(String [] properties, WorldModel world, ImageStore imageStore)

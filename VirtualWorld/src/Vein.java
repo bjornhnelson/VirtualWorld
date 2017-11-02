@@ -3,7 +3,7 @@ import processing.core.PImage;
 import java.util.Optional;
 import java.util.Random;
 
-public class Vein implements Dynamic {
+public class Vein extends EntityObjects implements Dynamic {
 
     private static final Random rand = new Random();
 
@@ -19,43 +19,17 @@ public class Vein implements Dynamic {
     private static final int VEIN_ROW = 3;
     private static final int VEIN_ACTION_PERIOD = 4;
 
-    private String id;
-    private Point position;
-    private List<PImage> images;
-    private int imageIndex;
     private int actionPeriod;
-    private int animationPeriod;
 
-    public Vein(String id, Point position, List<PImage> images, int actionPeriod, int animationPeriod)
+    public Vein(String id, Point position, List<PImage> images, int actionPeriod)
     {
-        this.id = id;
-        this.position = position;
-        this.images = images;
-        this.imageIndex = 0;
+        super(id, position, images);
         this.actionPeriod = actionPeriod;
-        this.animationPeriod = animationPeriod;
-    }
-
-    public Point getPosition() {
-        return position;
-    }
-
-    public void setPosition(Point pos) {
-        position = pos;
-    }
-
-    public int getAnimationPeriod() {
-        return animationPeriod;
-    }
-
-    public PImage getCurrentImage()
-    {
-        return images.get(imageIndex);
     }
 
     public void tryAddEntity(WorldModel world)
     {
-        if (world.isOccupied(position))
+        if (world.isOccupied(super.getPosition()))
         {
             // arguably the wrong type of exception, but we are not
             // defining our own exceptions yet
@@ -67,7 +41,7 @@ public class Vein implements Dynamic {
 
     public static Vein createVein(String id, Point position, int actionPeriod, List<PImage> images)
     {
-        return new Vein(id, position, images, actionPeriod, 0);
+        return new Vein(id, position, images, actionPeriod);
     }
 
     public ActivityAction createActivityAction(WorldModel world, ImageStore imageStore)
@@ -85,11 +59,11 @@ public class Vein implements Dynamic {
 
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)
     {
-        Optional<Point> openPt = world.findOpenAround(position);
+        Optional<Point> openPt = world.findOpenAround(super.getPosition());
 
         if (openPt.isPresent())
         {
-            Ore ore = Ore.createOre(ORE_ID_PREFIX + id,
+            Ore ore = Ore.createOre(ORE_ID_PREFIX + super.getId(),
                     openPt.get(), ORE_CORRUPT_MIN +
                             rand.nextInt(ORE_CORRUPT_MAX - ORE_CORRUPT_MIN),
                     imageStore.getImageList(ORE_KEY));

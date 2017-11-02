@@ -2,7 +2,7 @@ import java.util.List;
 import processing.core.PImage;
 import java.util.Optional;
 
-public class MinerFull implements Animated {
+public class MinerFull extends AnimatedObjects {
 
     private String id;
     private Point position;
@@ -15,13 +15,7 @@ public class MinerFull implements Animated {
     public MinerFull(String id, Point position,
                       List<PImage> images, int resourceLimit, int actionPeriod, int animationPeriod)
     {
-        this.id = id;
-        this.position = position;
-        this.images = images;
-        this.imageIndex = 0;
-        this.resourceLimit = resourceLimit;
-        this.actionPeriod = actionPeriod;
-        this.animationPeriod = animationPeriod;
+        super(id, position, images, resourceLimit, resourceLimit, actionPeriod, animationPeriod);
     }
 
     public Point getPosition() {

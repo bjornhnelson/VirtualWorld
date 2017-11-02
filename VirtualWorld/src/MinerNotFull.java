@@ -2,7 +2,7 @@ import java.util.List;
 import processing.core.PImage;
 import java.util.Optional;
 
-public class MinerNotFull implements Animated {
+public class MinerNotFull extends AnimatedObjects {
 
     private static final String MINER_KEY = "miner";
     private static final int MINER_NUM_PROPERTIES = 7;
@@ -26,14 +26,7 @@ public class MinerNotFull implements Animated {
                           List<PImage> images, int resourceLimit, int resourceCount,
                           int actionPeriod, int animationPeriod)
     {
-        this.id = id;
-        this.position = position;
-        this.images = images;
-        this.imageIndex = 0;
-        this.resourceLimit = resourceLimit;
-        this.resourceCount = resourceCount;
-        this.actionPeriod = actionPeriod;
-        this.animationPeriod = animationPeriod;
+        super(id, position, images, resourceLimit, resourceCount, actionPeriod, animationPeriod);
     }
 
     public Point getPosition() {

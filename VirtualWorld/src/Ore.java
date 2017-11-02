@@ -2,7 +2,7 @@ import java.util.List;
 import processing.core.PImage;
 import java.util.Random;
 
-public class Ore implements Dynamic {
+public class Ore extends EntityObjects implements Dynamic {
 
     private static final Random rand = new Random();
 
@@ -19,44 +19,18 @@ public class Ore implements Dynamic {
     private static final int ORE_ROW = 3;
     private static final int ORE_ACTION_PERIOD = 4;
 
-    private String id;
-    private Point position;
-    private List<PImage> images;
-    private int imageIndex;
     private int actionPeriod;
-    private int animationPeriod;
 
     public Ore(String id, Point position,
                List<PImage> images, int actionPeriod, int animationPeriod)
     {
-        this.id = id;
-        this.position = position;
-        this.images = images;
-        this.imageIndex = 0;
+        super(id, position, images);
         this.actionPeriod = actionPeriod;
-        this.animationPeriod = animationPeriod;
-    }
-
-    public Point getPosition() {
-        return position;
-    }
-
-    public void setPosition(Point pos) {
-        position = pos;
-    }
-
-    public int getAnimationPeriod() {
-        return animationPeriod;
-    }
-
-    public PImage getCurrentImage()
-    {
-        return images.get(imageIndex);
     }
 
     public void tryAddEntity(WorldModel world)
     {
-        if (world.isOccupied(position))
+        if (world.isOccupied(super.getPosition()))
         {
             // arguably the wrong type of exception, but we are not
             // defining our own exceptions yet
@@ -86,12 +60,12 @@ public class Ore implements Dynamic {
 
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)
     {
-        Point pos = position;  // store current position before removing
+        Point pos = super.getPosition();  // store current position before removing
 
         world.removeEntity(this);
         scheduler.unscheduleAllEvents(this);
 
-        OreBlob blob = OreBlob.createOreBlob(id + BLOB_ID_SUFFIX,
+        OreBlob blob = OreBlob.createOreBlob(super.getId() + BLOB_ID_SUFFIX,
                 pos, actionPeriod / BLOB_PERIOD_SCALE,
                 BLOB_ANIMATION_MIN +
                         rand.nextInt(BLOB_ANIMATION_MAX - BLOB_ANIMATION_MIN),
