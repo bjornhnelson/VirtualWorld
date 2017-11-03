@@ -11,8 +11,8 @@ final class WorldModel
    private int numRows;
    private int numCols;
    private Background background[][];
-   private Entity occupancy[][];
-   private Set<Entity> entities;
+   private EntityObjects occupancy[][];
+   private Set<EntityObjects> entities;
 
    private static final int ORE_REACH = 1;
 
@@ -21,7 +21,7 @@ final class WorldModel
       this.numRows = numRows;
       this.numCols = numCols;
       this.background = new Background[numRows][numCols];
-      this.occupancy = new Entity[numRows][numCols];
+      this.occupancy = new EntityObjects[numRows][numCols];
       this.entities = new HashSet<>();
 
       for (int row = 0; row < numRows; row++)
@@ -38,7 +38,7 @@ final class WorldModel
       return numCols;
    }
 
-   public Set<Entity> getEntities() {
+   public Set<EntityObjects> getEntities() {
       return entities;
    }
 
@@ -58,7 +58,7 @@ final class WorldModel
       Assumes that there is no entity currently occupying the
       intended destination cell.
    */
-   public void addEntity(Entity entity)
+   public void addEntity(EntityObjects entity)
    {
       if (withinBounds(entity.getPosition()))
       {
@@ -67,7 +67,7 @@ final class WorldModel
       }
    }
 
-   public void moveEntity(Entity entity, Point pos)
+   public void moveEntity(EntityObjects entity, Point pos)
    {
       Point oldPos = entity.getPosition();
       if (withinBounds(pos) && !pos.equals(oldPos))
@@ -79,7 +79,7 @@ final class WorldModel
       }
    }
 
-   public void removeEntity(Entity entity)
+   public void removeEntity(EntityObjects entity)
    {
       removeEntityAt(entity.getPosition());
    }
@@ -89,7 +89,7 @@ final class WorldModel
       if (withinBounds(pos)
               && getOccupancyCell(pos) != null)
       {
-         Entity entity = getOccupancyCell(pos);
+         EntityObjects entity = getOccupancyCell(pos);
 
          /* this moves the entity just outside of the grid for
             debugging purposes */
@@ -111,7 +111,7 @@ final class WorldModel
       }
    }
 
-   public Optional<Entity> getOccupant(Point pos)
+   public Optional<EntityObjects> getOccupant(Point pos)
    {
       if (isOccupied(pos))
       {
@@ -123,12 +123,12 @@ final class WorldModel
       }
    }
 
-   private Entity getOccupancyCell(Point pos)
+   private EntityObjects getOccupancyCell(Point pos)
    {
       return occupancy[pos.y][pos.x];
    }
 
-   private void setOccupancyCell(Point pos, Entity entity)
+   private void setOccupancyCell(Point pos, EntityObjects entity)
    {
       occupancy[pos.y][pos.x] = entity;
    }
@@ -169,10 +169,10 @@ final class WorldModel
       return Optional.empty();
    }
 
-   public Optional<Entity> findNearest(Point pos, Class kind)
+   public Optional<EntityObjects> findNearest(Point pos, Class kind)
    {
-      List<Entity> ofType = new LinkedList<>();
-      for (Entity entity : entities)
+      List<EntityObjects> ofType = new LinkedList<>();
+      for (EntityObjects entity : entities)
       {
          if (kind.isInstance(entity))
          {
@@ -183,7 +183,7 @@ final class WorldModel
       return nearestEntity(ofType, pos);
    }
 
-   private Optional<Entity> nearestEntity(List<Entity> entities, Point pos)
+   private Optional<EntityObjects> nearestEntity(List<EntityObjects> entities, Point pos)
    {
       if (entities.isEmpty())
       {
@@ -191,10 +191,10 @@ final class WorldModel
       }
       else
       {
-         Entity nearest = entities.get(0);
+         EntityObjects nearest = entities.get(0);
          int nearestDistance = pos.distanceSquared(nearest.getPosition());
 
-         for (Entity other : entities)
+         for (EntityObjects other : entities)
          {
             int otherDistance = pos.distanceSquared(other.getPosition());
 

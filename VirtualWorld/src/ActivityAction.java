@@ -1,11 +1,11 @@
 public class ActivityAction implements Action {
 
-    private Dynamic entity;
+    private DynamicObjects entity;
     private WorldModel world;
     private ImageStore imageStore;
     private int repeatCount;
 
-    public ActivityAction(Dynamic entity, WorldModel world,
+    public ActivityAction(DynamicObjects entity, WorldModel world,
                           ImageStore imageStore, int repeatCount)
     {
         this.entity = entity;

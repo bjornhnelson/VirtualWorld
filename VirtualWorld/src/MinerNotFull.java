@@ -44,7 +44,7 @@ public class MinerNotFull extends AnimatedObjects {
 
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)
     {
-        Optional<Entity> notFullTarget = world.findNearest(getPosition(), Ore.class);
+        Optional<EntityObjects> notFullTarget = world.findNearest(getPosition(), Ore.class);
 
         if (!notFullTarget.isPresent() ||
                 !moveToNotFull(world, notFullTarget.get(), scheduler) ||
@@ -56,7 +56,7 @@ public class MinerNotFull extends AnimatedObjects {
         }
     }
 
-    private boolean moveToNotFull(WorldModel world, Entity target, EventScheduler scheduler)
+    private boolean moveToNotFull(WorldModel world, EntityObjects target, EventScheduler scheduler)
     {
         if (getPosition().adjacent(target.getPosition()))
         {
@@ -72,7 +72,7 @@ public class MinerNotFull extends AnimatedObjects {
 
             if (!getPosition().equals(nextPos))
             {
-                Optional<Entity> occupant = world.getOccupant(nextPos);
+                Optional<EntityObjects> occupant = world.getOccupant(nextPos);
                 if (occupant.isPresent())
                 {
                     scheduler.unscheduleAllEvents(occupant.get());

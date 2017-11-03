@@ -28,7 +28,7 @@ public class OreBlob extends AnimatedObjects {
 
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)
     {
-        Optional<Entity> blobTarget = world.findNearest(getPosition(), Vein.class);  // check!
+        Optional<EntityObjects> blobTarget = world.findNearest(getPosition(), Vein.class);  // check!
         long nextPeriod = getActionPeriod();
 
         if (blobTarget.isPresent())
@@ -49,7 +49,7 @@ public class OreBlob extends AnimatedObjects {
         scheduler.scheduleEvent(this, createActivityAction(world, imageStore), nextPeriod);
     }
 
-    private boolean moveToOreBlob(WorldModel world, Entity target, EventScheduler scheduler)
+    private boolean moveToOreBlob(WorldModel world, EntityObjects target, EventScheduler scheduler)
     {
         if (getPosition().adjacent(target.getPosition()))
         {
@@ -63,7 +63,7 @@ public class OreBlob extends AnimatedObjects {
 
             if (!getPosition().equals(nextPos))
             {
-                Optional<Entity> occupant = world.getOccupant(nextPos);
+                Optional<EntityObjects> occupant = world.getOccupant(nextPos);
                 if (occupant.isPresent())
                 {
                     scheduler.unscheduleAllEvents(occupant.get());
@@ -81,7 +81,7 @@ public class OreBlob extends AnimatedObjects {
         Point newPos = new Point(getPosition().x + horiz,
                 getPosition().y);
 
-        Optional<Entity> occupant = world.getOccupant(newPos);
+        Optional<EntityObjects> occupant = world.getOccupant(newPos);
 
         if (horiz == 0 ||
                 (occupant.isPresent() && !(occupant.get() instanceof Ore)))

@@ -1,11 +1,11 @@
 public class AnimationAction implements Action {
 
-    private Animated entity;
+    private AnimatedObjects entity;
     private WorldModel world;
     private ImageStore imageStore;
     private int repeatCount;
 
-    public AnimationAction(Animated entity, WorldModel world,
+    public AnimationAction(AnimatedObjects entity, WorldModel world,
                            ImageStore imageStore, int repeatCount)
     {
         this.entity = entity;

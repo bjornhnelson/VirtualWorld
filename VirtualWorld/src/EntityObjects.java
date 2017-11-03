@@ -16,31 +16,31 @@ abstract class EntityObjects implements Entity {
         this.imageIndex = 0;
     }
 
-    public String getId() {
+    protected String getId() {
         return id;
     }
 
-    public List<PImage> getImages() {
+    protected List<PImage> getImages() {
         return images;
     }
 
-    public int getImageIndex() {
+    protected int getImageIndex() {
         return imageIndex;
     }
 
-    public void setImageIndex(int index) {
+    protected void setImageIndex(int index) {
         imageIndex = index;
     }
 
-    public Point getPosition() {
+    protected Point getPosition() {
         return position;
     }
 
-    public void setPosition(Point pos) {
+    protected void setPosition(Point pos) {
         position = pos;
     }
 
-    public PImage getCurrentImage()
+    protected PImage getCurrentImage()
     {
         return images.get(imageIndex);
     }

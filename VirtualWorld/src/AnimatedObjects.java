@@ -3,7 +3,6 @@ import processing.core.PImage;
 
 public abstract class AnimatedObjects extends DynamicObjects implements Animated {
 
-    private int actionPeriod;
     private int animationPeriod;
 
     public AnimatedObjects(String id, Point position,
@@ -13,13 +12,14 @@ public abstract class AnimatedObjects extends DynamicObjects implements Animated
         this.animationPeriod = animationPeriod;
 
     }
+
+    protected int getAnimationPeriod() {
+        return animationPeriod;
+    }
+
     public void nextImage() {
         int index = (getImageIndex() + 1) % getImages().size();
         setImageIndex(index);
-    }
-
-    public int getAnimationPeriod() {
-        return animationPeriod;
     }
 
     public AnimationAction createAnimationAction(int repeatCount) {

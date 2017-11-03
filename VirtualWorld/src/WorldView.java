@@ -38,7 +38,7 @@ final class WorldView
 
    private void drawEntities()
    {
-      for (Entity entity : world.getEntities())
+      for (EntityObjects entity : world.getEntities())
       {
          Point pos = entity.getPosition();
 
