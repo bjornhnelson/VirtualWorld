@@ -18,10 +18,10 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="183.29041861892023" width="184.57028091945324" x="19.014373580865083" y="917.3007660686549"/>
+          <y:Geometry height="183.29041861892023" width="198.9263000879837" x="19.014373580865083" y="917.3007660686549"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="83.45361328125" x="50.55833381910162" y="3.0">Background<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="83.45361328125" x="57.736343403366845" y="3.0">Background<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -46,10 +46,10 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="136.53756613756616" width="145.24774625384197" x="38.67564091367072" y="397.972022369524"/>
+          <y:Geometry height="136.53756613756616" width="162.863755036655" x="38.67564091367072" y="397.972022369524"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="40.943359375" x="52.152193439420984" y="3.0">Event<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="40.943359375" x="60.9601978308275" y="3.0">Event<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -59,10 +59,10 @@
           <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel>-action: Action
 -time: long
--entity: Entity</y:AttributeLabel>
+-entity: EntityObjects</y:AttributeLabel>
             <y:MethodLabel>+getAction(): Action
 +getTime(): long
-+getEntity(): Entity</y:MethodLabel>
++getEntity(): EntityObjects</y:MethodLabel>
           </y:UML>
         </y:UMLClassNode>
       </data>
@@ -71,7 +71,7 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="70.03025709240035" width="145.24774625384197" x="38.67564091367072" y="269.075522152913"/>
+          <y:Geometry height="70.03025709240035" width="145.24774625384197" x="47.48364530507723" y="269.075522152913"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="120.4033203125" x="12.422212970670984" y="3.0">EventComparator<y:LabelModel>
@@ -92,10 +92,10 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="155.89700468540832" width="263.3758160547738" x="-20.388393986795194" y="84.08925402089812"/>
+          <y:Geometry height="155.89700468540832" width="310.0064275386905" x="-20.388393986795194" y="84.08925402089812"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="106.349609375" x="78.5131033398869" y="3.0">EventScheduler<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="106.349609375" x="101.82840908184525" y="3.0">EventScheduler<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -104,7 +104,7 @@
           </y:NodeLabel>
           <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel>-eventQueue: PriorityQueue&lt;Event&gt;
--pendingEvents: Map&lt;Entity, List&lt;Event&gt;&gt;
+-pendingEvents: Map&lt;EntityObjects, List&lt;Event&gt;&gt;
 -timeScale: double</y:AttributeLabel>
             <y:MethodLabel>+unscheduleAllEvents()
 +scheduleEvent()                          
@@ -211,12 +211,12 @@
             <y:AttributeLabel>-numRows: int
 -numCols: int
 -background: Background[][]
--occupancy: Entity[][]
--entities: Set&lt;Entity&gt;
+-occupancy: EntityObjects[][]
+-entities: Set&lt;EntityObjects&gt;
 -ORE_REACH: int     &lt;&lt;static&gt;&gt;</y:AttributeLabel>
             <y:MethodLabel>+getNumRows(): int
 +getNumCols(): int
-+getEntities(): Set&lt;Entity&gt;
++getEntities(): Set&lt;EntityObjects&gt;
 -withinBounds(): boolean            
 +isOccupied(): boolean                
 +addEntity()                                 
@@ -224,15 +224,15 @@
 +removeEntity()                            
 -removeEntityAt()                        
 +getBackgroundImage(): Optional&lt;PImage&gt;
-+getOccupant(): Optional&lt;Entity&gt;           
--getOccupancyCell(): Entity         
++getOccupant(): Optional&lt;EntityObjects&gt;           
+-getOccupancyCell(): EntityObjects         
 -setOccupancyCell()
 +setBackground()                    
 -getBackgroundCell(): Background
 -setBackgroundCell()
 +findOpenAround(): Optional&lt;Point&gt;
-+findNearest(): Optional&lt;Entity&gt;
--nearestEntity(): Optional&lt;Entity&gt;</y:MethodLabel>
++findNearest(): Optional&lt;EntityObjects&gt;
+-nearestEntity(): Optional&lt;EntityObjects&gt;</y:MethodLabel>
           </y:UML>
         </y:UMLClassNode>
       </data>
@@ -386,7 +386,7 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="155.89700468540826" width="207.38537402360845" x="749.3407907522684" y="83.17851746750469"/>
+          <y:Geometry height="106.79620689489008" width="207.38537402360845" x="393.5083851849753" y="190.3401255993415"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="42.68896484375" x="82.34820458992922" y="26.1328125">Entity<y:LabelModel>
@@ -398,12 +398,7 @@
           </y:NodeLabel>
           <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="interface" use3DEffect="true">
             <y:AttributeLabel/>
-            <y:MethodLabel>+getPosition(): Point
-+setPosition()
-+getAnimationPeriod(): int  
-+getCurrentImage(): PImage
-
-</y:MethodLabel>
+            <y:MethodLabel>+tryAddEntity()</y:MethodLabel>
           </y:UML>
         </y:UMLClassNode>
       </data>
@@ -457,7 +452,7 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="340.1466260369829" width="279.5510238796497" x="992.8089897038974" y="1435.597166077631"/>
+          <y:Geometry height="157.1309043493115" width="279.5510238796497" x="1001.9151956689045" y="1404.054952369599"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="66.5498046875" x="106.50060959607484" y="3.0">MinerFull<y:LabelModel>
@@ -468,21 +463,8 @@
             </y:ModelParameter>
           </y:NodeLabel>
           <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
-            <y:AttributeLabel>-id: String
--position: Point
--images: List&lt;PImage&gt;
--imageIndex: int
--resourceLimit: int
--actionPeriod: int
--animationPeriod: int</y:AttributeLabel>
-            <y:MethodLabel>+getPosition(): Point
-+setPosition()
-+getAnimationPeriod(): int
-+nextImage()
-+getCurrentImage(): PImage
-+createMinerFull(): MinerFull     &lt;&lt;static&gt;&gt;
-+createActivityAction(): ActivityAction
-+createAnimationAction(): AnimationAction
+            <y:AttributeLabel>-resourceLimit: int</y:AttributeLabel>
+            <y:MethodLabel>+createMinerFull(): MinerFull     &lt;&lt;static&gt;&gt;
 +scheduleActions()
 +executeActivity()
 -moveToFull(): boolean
@@ -496,7 +478,7 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="492.6951779509631" width="316.0694598239668" x="882.6928519236028" y="1834.59988796505"/>
+          <y:Geometry height="299.3435999707762" width="316.0694598239668" x="1311.4662195485544" y="1288.8218371261007"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="90.1123046875" x="112.97857756823339" y="3.0">MinerNotFull<y:LabelModel>
@@ -515,23 +497,9 @@
 -MINER_LIMIT: int     &lt;&lt;static&gt;&gt;
 -MINER_ACTION_PERIOD: int     &lt;&lt;static&gt;&gt;
 -MINER_ANIMATION_PERIOD: int     &lt;&lt;static&gt;&gt;
--id: String
--position: Point
--images: List&lt;PImage&gt;
--imageIndex: int
 -resourceLimit: int
--resourceCount: int
--actionPeriod: int
--animationPeriod: int</y:AttributeLabel>
-            <y:MethodLabel>+getPosition(): Point
-+setPosition()
-+getAnimationPeriod(): int
-+nextImage()
-+getCurrentImage(): PImage
-+tryAddEntity()
-+createMinerNotFull(): MinerNotFull     &lt;&lt;static&gt;&gt;
-+createActivityAction(): ActivityAction
-+createAnimationAction(): AnimationAction
+-resourceCount: int</y:AttributeLabel>
+            <y:MethodLabel>+createMinerNotFull(): MinerNotFull     &lt;&lt;static&gt;&gt;
 +scheduleActions()
 +executeActivity()
 -moveToNotFull(): boolean
@@ -546,7 +514,7 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="340.1466260369829" width="296.26180713413794" x="372.7184290695858" y="269.075522152913"/>
+          <y:Geometry height="155.89700468540826" width="296.26180713413794" x="1007.5659531258941" y="397.972022369524"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="62.34130859375" x="116.96024927019397" y="3.0">Obstacle<y:LabelModel>
@@ -561,21 +529,8 @@
 -OBSTACLE_NUM_PROPERTIES: int     &lt;&lt;static&gt;&gt;
 -OBSTACLE_ID: int     &lt;&lt;static&gt;&gt;
 -OBSTACLE_COL: int     &lt;&lt;static&gt;&gt;
--OBSTACLE_ROW: int     &lt;&lt;static&gt;&gt;
--id: String
--position: Point
--images: List&lt;PImage&gt;
--imageIndex: int
--resourceLimit: int
--resourceCount: int
--actionPeriod: int
--animationPeriod: int</y:AttributeLabel>
-            <y:MethodLabel>+getPosition(): Point
-+setPosition()
-+getAnimationPeriod(): int
-+getCurrentImage(): PImage
-+tryAddEntity()
-+createObstacle(): Obstacle     &lt;&lt;static&gt;&gt;
+-OBSTACLE_ROW: int     &lt;&lt;static&gt;&gt;</y:AttributeLabel>
+            <y:MethodLabel>+createObstacle(): Obstacle     &lt;&lt;static&gt;&gt;
 +parseObstacle(): boolean     &lt;&lt;static&gt;&gt;   </y:MethodLabel>
           </y:UML>
         </y:UMLClassNode>
@@ -585,7 +540,7 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="492.6951779509631" width="270.7788779143144" x="393.5083851849753" y="803.0866756506298"/>
+          <y:Geometry height="282.7473101464166" width="270.7788779143144" x="1008.0157784561165" y="673.7105073868742"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="28.22900390625" x="121.27493700403221" y="3.0">Ore<y:LabelModel>
@@ -607,23 +562,8 @@
 -ORE_ID: int     &lt;&lt;static&gt;&gt;
 -ORE_COL: int     &lt;&lt;static&gt;&gt;
 -ORE_ROW: int     &lt;&lt;static&gt;&gt;
--ORE_ACTION_PERIOD: int     &lt;&lt;static&gt;&gt;
--id: String
--position: Point
--images: List&lt;PImage&gt;
--imageIndex: int
--resourceLimit: int
--resourceCount: int
--actionPeriod: int
--animationPeriod: int</y:AttributeLabel>
-            <y:MethodLabel>+getPosition(): Point
-+setPosition()
-+getAnimationPeriod(): int
-+nextImage()
-+getCurrentImage(): PImage
-+tryAddEntity()
-+createOre(): Ore     &lt;&lt;static&gt;&gt;
-+createActivityAction(): ActivityAction
+-ORE_ACTION_PERIOD: int     &lt;&lt;static&gt;&gt;</y:AttributeLabel>
+            <y:MethodLabel>+createOre(): Ore     &lt;&lt;static&gt;&gt;
 +scheduleActions()
 +executeActivity()
 +parseOre(): boolean     &lt;&lt;static&gt;&gt;</y:MethodLabel>
@@ -635,7 +575,7 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="354.86835673884224" width="270.7788779143144" x="426.7927337298134" y="1435.5971660776313"/>
+          <y:Geometry height="157.1309043493115" width="270.7788779143144" x="1001.9151956689045" y="1101.6909327767892"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="57.5615234375" x="106.60867723840721" y="3.0">OreBlob<y:LabelModel>
@@ -646,23 +586,8 @@
             </y:ModelParameter>
           </y:NodeLabel>
           <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
-            <y:AttributeLabel>-QUAKE_KEY: String     &lt;&lt;static&gt;&gt;
--id: String
--position: Point
--images: List&lt;PImage&gt;
--imageIndex: int
--resourceLimit: int
--resourceCount: int
--actionPeriod: int
--animationPeriod: int</y:AttributeLabel>
-            <y:MethodLabel>+getPosition(): Point
-+setPosition()
-+getAnimationPeriod(): int
-+nextImage()
-+getCurrentImage(): PImage
-+createOreBlob(): OreBlob     &lt;&lt;static&gt;&gt;
-+createActivityAction(): ActivityAction
-+createAnimationAction(): AnimationAction
+            <y:AttributeLabel>-QUAKE_KEY: String     &lt;&lt;static&gt;&gt;</y:AttributeLabel>
+            <y:MethodLabel>+createOreBlob(): OreBlob     &lt;&lt;static&gt;&gt;
 +scheduleActions()
 +executeActivity()
 -moveToOreBlob(): boolean
@@ -675,7 +600,7 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="340.14662603698304" width="296.26180713413817" x="1037.0867193244214" y="269.075522152913"/>
+          <y:Geometry height="155.89700468540826" width="296.26180713413817" x="1007.5659531258941" y="190.3401255993415"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="77.19482421875" x="109.53349145769408" y="3.0">Blacksmith<y:LabelModel>
@@ -690,21 +615,8 @@
 -SMITH_NUM_PROPERTIES: int     &lt;&lt;static&gt;&gt;
 -SMITH_ID: int     &lt;&lt;static&gt;&gt;
 -SMITH_COL: int     &lt;&lt;static&gt;&gt;
--SMITH_ROW: int     &lt;&lt;static&gt;&gt;
--id: String
--position: Point
--images: List&lt;PImage&gt;
--imageIndex: int
--resourceLimit: int
--resourceCount: int
--actionPeriod: int
--animationPeriod: int</y:AttributeLabel>
-            <y:MethodLabel>+getPosition(): Point
-+setPosition()
-+getAnimationPeriod(): int
-+getCurrentImage(): PImage
-+tryAddEntity()
-+createBlacksmith(): Blacksmith     &lt;&lt;static&gt;&gt;
+-SMITH_ROW: int     &lt;&lt;static&gt;&gt;</y:AttributeLabel>
+            <y:MethodLabel>+createBlacksmith(): Blacksmith     &lt;&lt;static&gt;&gt;
 +parseSmith(): boolean     &lt;&lt;static&gt;&gt;   </y:MethodLabel>
           </y:UML>
         </y:UMLClassNode>
@@ -714,7 +626,7 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="369.21589485176486" width="346.0310093212855" x="490.170431142091" y="1834.59988796505"/>
+          <y:Geometry height="157.1309043493115" width="346.0310093212855" x="1308.794656370431" y="1101.6909327767892"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="46.732421875" x="149.64929372314276" y="3.0">Quake<y:LabelModel>
@@ -728,23 +640,8 @@
             <y:AttributeLabel>-QUAKE_ID: String     &lt;&lt;static&gt;&gt;
 -QUAKE_ACTION_PERIOD: int     &lt;&lt;static&gt;&gt;
 -QUAKE_ANIMATION_PERIOD: int     &lt;&lt;static&gt;&gt;
--QUAKE_ANIMATION_REPEAT_COUNT: int     &lt;&lt;static&gt;&gt;
--id: String
--position: Point
--images: List&lt;PImage&gt;
--imageIndex: int
--resourceLimit: int
--resourceCount: int
--actionPeriod: int
--animationPeriod: int</y:AttributeLabel>
-            <y:MethodLabel>+getPosition(): Point
-+setPosition()
-+getAnimationPeriod(): int
-+nextImage()
-+getCurrentImage(): PImage
-+createQuake(): Quake     &lt;&lt;static&gt;&gt;
-+createActivityAction(): ActivityAction
-+createAnimationAction(): AnimationAction
+-QUAKE_ANIMATION_REPEAT_COUNT: int     &lt;&lt;static&gt;&gt;</y:AttributeLabel>
+            <y:MethodLabel>+createQuake(): Quake     &lt;&lt;static&gt;&gt;
 +scheduleActions()
 +executeActivity()</y:MethodLabel>
           </y:UML>
@@ -755,10 +652,10 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="480.72924853520084" width="251.05413171901262" x="1041.7796924288555" y="803.0866756506298"/>
+          <y:Geometry height="279.75582779247594" width="270.7788779143144" x="1308.7946563704309" y="673.7105073868742"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="33.4658203125" x="108.79415570325631" y="3.0">Vein<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="33.4658203125" x="118.65652880090721" y="3.0">Vein<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -776,23 +673,8 @@
 -VEIN_ID: int     &lt;&lt;static&gt;&gt;
 -VEIN_COL: int     &lt;&lt;static&gt;&gt;
 -VEIN_ROW: int     &lt;&lt;static&gt;&gt;
--VEIN_ACTION_PERIOD: int     &lt;&lt;static&gt;&gt;
--id: String
--position: Point
--images: List&lt;PImage&gt;
--imageIndex: int
--resourceLimit: int
--resourceCount: int
--actionPeriod: int
--animationPeriod: int</y:AttributeLabel>
-            <y:MethodLabel>+getPosition(): Point
-+setPosition()
-+getAnimationPeriod(): int
-+nextImage()
-+getCurrentImage(): PImage
-+tryAddEntity()
-+createVein(): Vein     &lt;&lt;static&gt;&gt;
-+createActivityAction(): ActivityAction
+-VEIN_ACTION_PERIOD: int     &lt;&lt;static&gt;&gt;</y:AttributeLabel>
+            <y:MethodLabel>+createVein(): Vein     &lt;&lt;static&gt;&gt;
 +scheduleActions()
 +executeActivity()
 +parseVein(): boolean     &lt;&lt;static&gt;&gt;</y:MethodLabel>
@@ -804,10 +686,10 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="136.53756613756622" width="262.5123156121554" x="721.7773199579949" y="603.0555509052218"/>
+          <y:Geometry height="108.9523993714858" width="207.38537402360856" x="393.5083851849753" y="586.7718319696849"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="61.82080078125" x="100.34575741545271" y="26.1328125">Dynamic<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="61.82080078125" x="72.78228662117928" y="26.1328125">Dynamic<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -816,9 +698,8 @@
           </y:NodeLabel>
           <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="interface" use3DEffect="true">
             <y:AttributeLabel/>
-            <y:MethodLabel>+createActivityAction(): ActivityAction
-+scheduleActions()
-+executeActivity
+            <y:MethodLabel>+scheduleActions()
++executeActivity()
 </y:MethodLabel>
           </y:UML>
         </y:UMLClassNode>
@@ -828,10 +709,10 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="108.9523993714858" width="279.5510238796497" x="713.2579658242478" y="1296.6447667061452"/>
+          <y:Geometry height="108.9523993714858" width="207.38537402360845" x="393.50838518497534" y="1011.1844990236581"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="68.0859375" x="105.73254318982484" y="26.1328125">Animated<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="68.0859375" x="69.64971826180422" y="26.1328125">Animated<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -840,8 +721,7 @@
           </y:NodeLabel>
           <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="interface" use3DEffect="true">
             <y:AttributeLabel/>
-            <y:MethodLabel>+createAnimationAction(): AnimationAction
-+nextImage()</y:MethodLabel>
+            <y:MethodLabel>+nextImage()</y:MethodLabel>
           </y:UML>
         </y:UMLClassNode>
       </data>
@@ -850,7 +730,7 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="155.89700468540826" width="207.38537402360845" x="776.9042615465419" y="370.127524407877"/>
+          <y:Geometry height="253.25322318680304" width="207.38537402360845" x="686.2635890020427" y="141.66201634864407"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="93.4892578125" x="56.948058105554225" y="26.1328125">EntityObjects<y:LabelModel>
@@ -861,13 +741,18 @@
             </y:ModelParameter>
           </y:NodeLabel>
           <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="abstract" use3DEffect="true">
-            <y:AttributeLabel/>
-            <y:MethodLabel>+getPosition(): Point
-+setPosition()
-+getAnimationPeriod(): int  
-+getCurrentImage(): PImage
-
-</y:MethodLabel>
+            <y:AttributeLabel>-id: String
+-position: Point
+-images: List&lt;PImage&gt;
+-imageIndex: int</y:AttributeLabel>
+            <y:MethodLabel>#getId(): String
+#getImages: List&lt;PImage&gt;
+#getImageIndex(): int
+#setImageIndex()
+#getPosition(): Point
+#setPosition()
+#getCurrentImage(): PImage
++tryAddEntity()</y:MethodLabel>
           </y:UML>
         </y:UMLClassNode>
       </data>
@@ -876,10 +761,10 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="108.9523993714858" width="262.5123156121554" x="713.934142867935" y="1435.597166077631"/>
+          <y:Geometry height="125.48458741889243" width="279.5510238796497" x="686.2635890020427" y="1019.2180213911753"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="118.88623046875" x="71.81304257170271" y="26.1328125">AnimatedObjects<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="118.88623046875" x="80.33239670544984" y="26.1328125">AnimatedObjects<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -887,141 +772,320 @@
             </y:ModelParameter>
           </y:NodeLabel>
           <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="abstract" use3DEffect="true">
-            <y:AttributeLabel/>
-            <y:MethodLabel>+createAnimationAction(): AnimationAction
-+nextImage()</y:MethodLabel>
+            <y:AttributeLabel>-animationPeriod: int</y:AttributeLabel>
+            <y:MethodLabel>#getAnimationPeriod(): int
++nextImage()
++createAnimationAction(): AnimationAction</y:MethodLabel>
           </y:UML>
         </y:UMLClassNode>
       </data>
     </node>
-    <edge id="e0" source="n12" target="n20">
+    <node id="n27">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="194.47211012935713" width="241.23615634464846" x="686.2635890020427" y="586.7718319696849"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="112.62109375" x="64.30753129732423" y="26.1328125">DynamicObjects<y:LabelModel>
+              <y:SmartNodeLabelModel distance="4.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="abstract" use3DEffect="true">
+            <y:AttributeLabel>-actionPeriod: int</y:AttributeLabel>
+            <y:MethodLabel>#getActionPeriod(): int
+#createActivityAction(): ActivityAction
++executeActivity()     &lt;abstract&gt;&gt;
++scheduleActions()     &lt;&lt;abstract&gt;&gt;
+</y:MethodLabel>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <edge id="e0" source="n13" target="n11">
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="1185.2176228914905" y="217.71087129625874"/>
-          </y:Path>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="dashed" width="1.0"/>
           <y:Arrows source="none" target="white_delta"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e1" source="n12" target="n23">
+    <edge id="e1" source="n13" target="n14">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="dashed" width="1.0"/>
+          <y:Arrows source="none" target="white_delta"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e2" source="n12" target="n23">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="white_delta"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="-32.00000812548603" y="142.7907826714113">
+            <y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.5" segment="0"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e2" source="n12" target="n17">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="520.8493326366547" y="217.71087129625874"/>
-          </y:Path>
-          <y:LineStyle color="#000000" type="dashed" width="1.0"/>
-          <y:Arrows source="none" target="white_delta"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e3" source="n23" target="n22">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="1167.3067582883618" y="744.5063040717787"/>
-          </y:Path>
-          <y:LineStyle color="#000000" type="dashed" width="1.0"/>
-          <y:Arrows source="none" target="white_delta"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e4" source="n23" target="n24">
+    <edge id="e3" source="n23" target="n24">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="white_delta"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="-32.00000812548603" y="155.72999994803945">
+            <y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.5" segment="0"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e5" source="n24" target="n19">
+    <edge id="e4" source="n12" target="n25">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="dashed" width="1.0"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="67.45133299059114" y="32.48719151475086">
+            <y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="26.40261708851487" distanceToCenter="false" position="right" ratio="0.8747514878248182" segment="0"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e5" source="n25" target="n20">
+      <data key="d8"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="dashed" width="1.0"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="54.93839069296018" y="27.999992688139343">
+            <y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.5" segment="0"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e6" source="n25" target="n17">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="dashed" width="1.0"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="54.96066852499143" y="64.83395046062412">
+            <y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.5" segment="0"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e7" source="n27" target="n18">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="562.1821726869706" y="1385.924288798957"/>
+            <y:Point x="1069.7600636530724" y="648.4572254201807"/>
+            <y:Point x="1143.4052174132737" y="648.4572254201807"/>
           </y:Path>
           <y:LineStyle color="#000000" type="dashed" width="1.0"/>
-          <y:Arrows source="none" target="white_delta"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="74.63349468771798" y="17.9094920280196">
+            <y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.5" segment="0"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e6" source="n24" target="n21">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="dashed" width="1.0"/>
-          <y:Arrows source="none" target="white_delta"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e7" source="n24" target="n15">
+    <edge id="e8" source="n27" target="n22">
+      <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="1132.5845016437222" y="1385.422658959965"/>
+            <y:Point x="1065.9533962286312" y="607.4272071761786"/>
+            <y:Point x="1444.184095327588" y="607.4272071761786"/>
           </y:Path>
           <y:LineStyle color="#000000" type="dashed" width="1.0"/>
-          <y:Arrows source="none" target="white_delta"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="75.6997645065835" y="6.31541043384459">
+            <y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.5" segment="0"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e8" source="n24" target="n16">
+    <edge id="e9" source="n24" target="n26">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="dashed" width="1.0"/>
-          <y:Arrows source="none" target="white_delta"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="40.69244363656321" y="30.15302496285358">
+            <y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.5" segment="0"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e9" source="n13" target="n11">
+    <edge id="e10" source="n23" target="n27">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="dashed" width="1.0"/>
-          <y:Arrows source="none" target="white_delta"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="40.68450906625071" y="34.17840930677335">
+            <y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.5" segment="0"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e10" source="n13" target="n14">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="dashed" width="1.0"/>
-          <y:Arrows source="none" target="white_delta"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e11" source="n23" target="n18">
+    <edge id="e11" source="n26" target="n19">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="528.8978241421325" y="737.4385563031102"/>
+            <y:Point x="1137.3046346260617" y="1081.9603151006215"/>
           </y:Path>
           <y:LineStyle color="#000000" type="dashed" width="1.0"/>
-          <y:Arrows source="none" target="white_delta"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="87.23223117575208" y="27.99998795218403">
+            <y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.5" segment="0"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e12" source="n26" target="n21">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
+            <y:Point x="1015.5420194711675" y="1052.3916473755276"/>
+            <y:Point x="1481.810161031074" y="1052.3916473755276"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="dashed" width="1.0"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="248.3848341344983" y="19.683736314539146">
+            <y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="27.44406647807407" distanceToCenter="false" position="right" ratio="0.43033087503548395" segment="1"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e13" source="n26" target="n16">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
+            <y:Point x="1014.0219243660572" y="1313.8653434372534"/>
+            <y:Point x="1306.4500849458705" y="1313.8653434372534"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="dashed" width="1.0"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="43.2421588281843" y="101.45440420469367">
+            <y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="27.186921530047147" distanceToCenter="false" position="right" ratio="0.5" segment="0"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e14" source="n26" target="n15">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
+            <y:Point x="944.1639879043875" y="1482.6204045442548"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="dashed" width="1.0"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="19.04295526196904" y="175.45957772694828">
+            <y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.5" segment="0"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
