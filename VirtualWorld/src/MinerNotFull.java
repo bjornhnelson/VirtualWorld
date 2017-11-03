@@ -4,15 +4,6 @@ import java.util.Optional;
 
 public class MinerNotFull extends AnimatedObjects {
 
-    private static final String MINER_KEY = "miner";
-    private static final int MINER_NUM_PROPERTIES = 7;
-    private static final int MINER_ID = 1;
-    private static final int MINER_COL = 2;
-    private static final int MINER_ROW = 3;
-    private static final int MINER_LIMIT = 4;
-    private static final int MINER_ACTION_PERIOD = 5;
-    private static final int MINER_ANIMATION_PERIOD = 6;
-
     private int resourceLimit;
     private int resourceCount;
 
@@ -121,25 +112,6 @@ public class MinerNotFull extends AnimatedObjects {
         }
 
         return newPos;
-    }
-
-    public static boolean parseMiner(String [] properties, WorldModel world,
-                                      ImageStore imageStore)
-    {
-        if (properties.length == MINER_NUM_PROPERTIES)
-        {
-            Point pt = new Point(Integer.parseInt(properties[MINER_COL]),
-                    Integer.parseInt(properties[MINER_ROW]));
-            MinerNotFull entity = createMinerNotFull(properties[MINER_ID],
-                    Integer.parseInt(properties[MINER_LIMIT]),
-                    pt,
-                    Integer.parseInt(properties[MINER_ACTION_PERIOD]),
-                    Integer.parseInt(properties[MINER_ANIMATION_PERIOD]),
-                    imageStore.getImageList(MINER_KEY));
-            entity.tryAddEntity(world);
-        }
-
-        return properties.length == MINER_NUM_PROPERTIES;
     }
 
 }

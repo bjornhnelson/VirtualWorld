@@ -19,7 +19,7 @@ final class Event
       return time;
    }
 
-   public Entity getEntity() {
+   public EntityObjects getEntity() {
       return entity;
    }
 }
