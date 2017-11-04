@@ -167,7 +167,7 @@ final class Functions
       return Math.min(high, Math.max(value, low));
    }
 
-   public static boolean parseBackground(String [] properties, WorldModel world, ImageStore imageStore)
+   private static boolean parseBackground(String [] properties, WorldModel world, ImageStore imageStore)
    {
       if (properties.length == BGND_NUM_PROPERTIES)
       {
@@ -180,7 +180,7 @@ final class Functions
       return properties.length == BGND_NUM_PROPERTIES;
    }
 
-   public static boolean parseMiner(String [] properties, WorldModel world,
+   private static boolean parseMiner(String [] properties, WorldModel world,
                                     ImageStore imageStore)
    {
       if (properties.length == MINER_NUM_PROPERTIES)
@@ -199,7 +199,7 @@ final class Functions
       return properties.length == MINER_NUM_PROPERTIES;
    }
 
-   public static boolean parseObstacle(String [] properties, WorldModel world, ImageStore imageStore)
+   private static boolean parseObstacle(String [] properties, WorldModel world, ImageStore imageStore)
    {
       if (properties.length == OBSTACLE_NUM_PROPERTIES)
       {
@@ -214,7 +214,7 @@ final class Functions
       return properties.length == OBSTACLE_NUM_PROPERTIES;
    }
 
-   public static boolean parseOre(String [] properties, WorldModel world, ImageStore imageStore)
+   private static boolean parseOre(String [] properties, WorldModel world, ImageStore imageStore)
    {
       if (properties.length == ORE_NUM_PROPERTIES)
       {
@@ -229,7 +229,7 @@ final class Functions
       return properties.length == ORE_NUM_PROPERTIES;
    }
 
-   public static boolean parseSmith(String [] properties, WorldModel world, ImageStore imageStore)
+   private static boolean parseSmith(String [] properties, WorldModel world, ImageStore imageStore)
    {
       if (properties.length == SMITH_NUM_PROPERTIES)
       {
@@ -243,7 +243,7 @@ final class Functions
       return properties.length == SMITH_NUM_PROPERTIES;
    }
 
-   public static boolean parseVein(String [] properties, WorldModel world, ImageStore imageStore)
+   private static boolean parseVein(String [] properties, WorldModel world, ImageStore imageStore)
    {
       if (properties.length == VEIN_NUM_PROPERTIES)
       {
@@ -259,7 +259,7 @@ final class Functions
       return properties.length == VEIN_NUM_PROPERTIES;
    }
 
-   public static void tryAddEntity(WorldModel world, EntityObjects entity)
+   private static void tryAddEntity(WorldModel world, EntityObjects entity)
    {
       if (world.isOccupied(entity.getPosition()))
       {

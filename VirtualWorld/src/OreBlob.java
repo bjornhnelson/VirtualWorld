@@ -6,7 +6,6 @@ public class OreBlob extends AnimatedSchedule {
 
     private static final String QUAKE_KEY = "quake";
 
-
     public OreBlob(String id, Point position, List<PImage> images, int actionPeriod, int animationPeriod)
     {
         super(id, position, images, actionPeriod, animationPeriod);
