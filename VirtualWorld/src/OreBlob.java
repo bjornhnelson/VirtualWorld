@@ -2,7 +2,7 @@ import java.util.List;
 import processing.core.PImage;
 import java.util.Optional;
 
-public class OreBlob extends AnimatedObjects {
+public class OreBlob extends AnimatedSchedule {
 
     private static final String QUAKE_KEY = "quake";
 
@@ -59,7 +59,7 @@ public class OreBlob extends AnimatedObjects {
         }
         else
         {
-            Point nextPos = nextPositionOreBlob(world, target.getPosition());
+            Point nextPos = nextPosition(world, target.getPosition());
 
             if (!getPosition().equals(nextPos))
             {
@@ -73,31 +73,6 @@ public class OreBlob extends AnimatedObjects {
             }
             return false;
         }
-    }
-
-    private Point nextPositionOreBlob(WorldModel world, Point destPos)
-    {
-        int horiz = Integer.signum(destPos.x - getPosition().x);
-        Point newPos = new Point(getPosition().x + horiz,
-                getPosition().y);
-
-        Optional<EntityObjects> occupant = world.getOccupant(newPos);
-
-        if (horiz == 0 ||
-                (occupant.isPresent() && !(occupant.get() instanceof Ore)))
-        {
-            int vert = Integer.signum(destPos.y - getPosition().y);
-            newPos = new Point(getPosition().x, getPosition().y + vert);
-            occupant = world.getOccupant(newPos);
-
-            if (vert == 0 ||
-                    (occupant.isPresent() && !(occupant.get() instanceof Ore)))
-            {
-                newPos = getPosition();
-            }
-        }
-
-        return newPos;
     }
 
 }

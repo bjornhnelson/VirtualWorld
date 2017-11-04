@@ -2,7 +2,7 @@ import java.util.List;
 import processing.core.PImage;
 import java.util.Optional;
 
-public class MinerFull extends AnimatedObjects {
+public class MinerFull extends AnimatedSchedule {
 
     private int resourceLimit;
 
@@ -53,7 +53,7 @@ public class MinerFull extends AnimatedObjects {
         }
         else
         {
-            Point nextPos = nextPositionMiner(world, target.getPosition());
+            Point nextPos = nextPosition(world, target.getPosition());
 
             if (!getPosition().equals(nextPos))
             {
@@ -78,26 +78,6 @@ public class MinerFull extends AnimatedObjects {
 
         world.addEntity(miner);
         miner.scheduleActions(scheduler, world, imageStore);
-    }
-
-    private Point nextPositionMiner(WorldModel world, Point destPos)
-    {
-        int horiz = Integer.signum(destPos.x - getPosition().x);
-        Point newPos = new Point(getPosition().x + horiz,
-                getPosition().y);
-
-        if (horiz == 0 || world.isOccupied(newPos))
-        {
-            int vert = Integer.signum(destPos.y - getPosition().y);
-            newPos = new Point(getPosition().x, getPosition().y + vert);
-
-            if (vert == 0 || world.isOccupied(newPos))
-            {
-                newPos = getPosition();
-            }
-        }
-
-        return newPos;
     }
 
 }
