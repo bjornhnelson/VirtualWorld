@@ -45,16 +45,4 @@ abstract class EntityObjects implements Entity {
         return images.get(imageIndex);
     }
 
-    public void tryAddEntity(WorldModel world)
-    {
-        if (world.isOccupied(getPosition()))
-        {
-            // arguably the wrong type of exception, but we are not
-            // defining our own exceptions yet
-            throw new IllegalArgumentException("position occupied");
-        }
-
-        world.addEntity(this);
-    }
-
 }

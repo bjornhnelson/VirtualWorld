@@ -24,15 +24,6 @@ public class MinerNotFull extends AnimatedSchedule {
                 resourceLimit, 0, actionPeriod, animationPeriod);
     }
 
-    public void scheduleActions(EventScheduler scheduler, WorldModel world, ImageStore imageStore) {
-
-        scheduler.scheduleEvent(this,
-                createActivityAction(world, imageStore),
-                getActionPeriod());
-        scheduler.scheduleEvent(this,
-                createAnimationAction(0), getAnimationPeriod());
-    }
-
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)
     {
         Optional<EntityObjects> notFullTarget = world.findNearest(getPosition(), Ore.class);

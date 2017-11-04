@@ -19,15 +19,6 @@ public class MinerFull extends AnimatedSchedule {
         return new MinerFull(id, position, images, resourceLimit, actionPeriod, animationPeriod);
     }
 
-    public void scheduleActions(EventScheduler scheduler, WorldModel world, ImageStore imageStore) {
-
-        scheduler.scheduleEvent(this,
-                createActivityAction(world, imageStore),
-                getActionPeriod());
-        scheduler.scheduleEvent(this, createAnimationAction(0),
-                getAnimationPeriod());
-    }
-
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)
     {
         Optional<EntityObjects> fullTarget = world.findNearest(getPosition(), Blacksmith.class);

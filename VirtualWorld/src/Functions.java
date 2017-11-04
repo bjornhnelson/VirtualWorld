@@ -193,7 +193,7 @@ final class Functions
                  Integer.parseInt(properties[MINER_ACTION_PERIOD]),
                  Integer.parseInt(properties[MINER_ANIMATION_PERIOD]),
                  imageStore.getImageList(MINER_KEY));
-         entity.tryAddEntity(world);
+         tryAddEntity(world, entity);
       }
 
       return properties.length == MINER_NUM_PROPERTIES;
@@ -208,7 +208,7 @@ final class Functions
                  Integer.parseInt(properties[OBSTACLE_ROW]));
          Obstacle entity = Obstacle.createObstacle(properties[OBSTACLE_ID],
                  pt, imageStore.getImageList(OBSTACLE_KEY));
-         entity.tryAddEntity(world);
+         tryAddEntity(world, entity);
       }
 
       return properties.length == OBSTACLE_NUM_PROPERTIES;
@@ -223,7 +223,7 @@ final class Functions
          Ore entity = Ore.createOre(properties[ORE_ID],
                  pt, Integer.parseInt(properties[ORE_ACTION_PERIOD]),
                  imageStore.getImageList(ORE_KEY));
-         entity.tryAddEntity(world);
+         tryAddEntity(world, entity);
       }
 
       return properties.length == ORE_NUM_PROPERTIES;
@@ -237,7 +237,7 @@ final class Functions
                  Integer.parseInt(properties[SMITH_ROW]));
          Blacksmith entity = Blacksmith.createBlacksmith(properties[SMITH_ID],
                  pt, imageStore.getImageList(SMITH_KEY));
-         entity.tryAddEntity(world);
+         tryAddEntity(world, entity);
       }
 
       return properties.length == SMITH_NUM_PROPERTIES;
@@ -253,10 +253,22 @@ final class Functions
                  pt,
                  Integer.parseInt(properties[VEIN_ACTION_PERIOD]),
                  imageStore.getImageList(VEIN_KEY));
-         entity.tryAddEntity(world);
+         tryAddEntity(world, entity);
       }
 
       return properties.length == VEIN_NUM_PROPERTIES;
+   }
+
+   public static void tryAddEntity(WorldModel world, EntityObjects entity)
+   {
+      if (world.isOccupied(entity.getPosition()))
+      {
+         // arguably the wrong type of exception, but we are not
+         // defining our own exceptions yet
+         throw new IllegalArgumentException("position occupied");
+      }
+
+      world.addEntity(entity);
    }
 
 }
