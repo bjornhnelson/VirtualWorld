@@ -2,7 +2,7 @@ import java.util.List;
 import processing.core.PImage;
 import java.util.Random;
 
-public class Ore extends DynamicObjects {
+public class Ore extends DynamicSchedule {
 
     private static final Random rand = new Random();
 
@@ -12,8 +12,7 @@ public class Ore extends DynamicObjects {
     private static final int BLOB_ANIMATION_MIN = 50;
     private static final int BLOB_ANIMATION_MAX = 150;
 
-    public Ore(String id, Point position,
-               List<PImage> images, int actionPeriod)
+    public Ore(String id, Point position, List<PImage> images, int actionPeriod)
     {
         super(id, position, images, actionPeriod);
     }
@@ -21,13 +20,6 @@ public class Ore extends DynamicObjects {
     public static Ore createOre(String id, Point position, int actionPeriod, List<PImage> images)
     {
         return new Ore(id, position, images, actionPeriod);
-    }
-
-    public void scheduleActions(EventScheduler scheduler, WorldModel world, ImageStore imageStore) {
-
-        scheduler.scheduleEvent(this,
-                createActivityAction(world, imageStore),
-                getActionPeriod());
     }
 
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)

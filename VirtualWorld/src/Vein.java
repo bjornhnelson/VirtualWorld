@@ -3,7 +3,7 @@ import processing.core.PImage;
 import java.util.Optional;
 import java.util.Random;
 
-public class Vein extends DynamicObjects {
+public class Vein extends DynamicSchedule {
 
     private static final Random rand = new Random();
 
@@ -20,13 +20,6 @@ public class Vein extends DynamicObjects {
     public static Vein createVein(String id, Point position, int actionPeriod, List<PImage> images)
     {
         return new Vein(id, position, images, actionPeriod);
-    }
-
-    public void scheduleActions(EventScheduler scheduler, WorldModel world, ImageStore imageStore) {
-
-        scheduler.scheduleEvent(this,
-                createActivityAction(world, imageStore),
-                getActionPeriod());
     }
 
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)

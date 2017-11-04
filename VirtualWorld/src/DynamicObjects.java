@@ -21,5 +21,4 @@ public abstract class DynamicObjects extends EntityObjects implements Dynamic {
 
     public abstract void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler);
 
-    public abstract void scheduleActions(EventScheduler scheduler, WorldModel world, ImageStore imageStore);
 }
