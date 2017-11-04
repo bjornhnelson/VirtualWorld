@@ -24,45 +24,21 @@ public class MinerNotFull extends AnimatedSchedule {
                 resourceLimit, 0, actionPeriod, animationPeriod);
     }
 
+    public void incrementResourceCount(int value) {
+        resourceCount += value;
+    }
+
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)
     {
         Optional<EntityObjects> notFullTarget = world.findNearest(getPosition(), Ore.class);
 
         if (!notFullTarget.isPresent() ||
-                !moveToNotFull(world, notFullTarget.get(), scheduler) ||
-                !this.transformNotFull(world, scheduler, imageStore))
+                !moveToEntity(world, notFullTarget.get(), scheduler) ||
+                !transformNotFull(world, scheduler, imageStore))
         {
             scheduler.scheduleEvent(this,
                     createActivityAction(world, imageStore),
                     getActionPeriod());
-        }
-    }
-
-    private boolean moveToNotFull(WorldModel world, EntityObjects target, EventScheduler scheduler)
-    {
-        if (getPosition().adjacent(target.getPosition()))
-        {
-            resourceCount += 1;
-            world.removeEntity(target);
-            scheduler.unscheduleAllEvents(target);
-
-            return true;
-        }
-        else
-        {
-            Point nextPos = nextPosition(world, target.getPosition());
-
-            if (!getPosition().equals(nextPos))
-            {
-                Optional<EntityObjects> occupant = world.getOccupant(nextPos);
-                if (occupant.isPresent())
-                {
-                    scheduler.unscheduleAllEvents(occupant.get());
-                }
-
-                world.moveEntity(this, nextPos);
-            }
-            return false;
         }
     }
 

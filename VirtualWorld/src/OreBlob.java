@@ -26,7 +26,7 @@ public class OreBlob extends AnimatedSchedule {
         {
             Point tgtPos = blobTarget.get().getPosition();
 
-            if (moveToOreBlob(world, blobTarget.get(), scheduler))
+            if (moveToEntity(world, blobTarget.get(), scheduler))
             {
                 Quake quake = Quake.createQuake(tgtPos,
                         imageStore.getImageList(QUAKE_KEY));
@@ -38,32 +38,6 @@ public class OreBlob extends AnimatedSchedule {
         }
 
         scheduler.scheduleEvent(this, createActivityAction(world, imageStore), nextPeriod);
-    }
-
-    private boolean moveToOreBlob(WorldModel world, EntityObjects target, EventScheduler scheduler)
-    {
-        if (getPosition().adjacent(target.getPosition()))
-        {
-            world.removeEntity(target);
-            scheduler.unscheduleAllEvents(target);
-            return true;
-        }
-        else
-        {
-            Point nextPos = nextPosition(world, target.getPosition());
-
-            if (!getPosition().equals(nextPos))
-            {
-                Optional<EntityObjects> occupant = world.getOccupant(nextPos);
-                if (occupant.isPresent())
-                {
-                    scheduler.unscheduleAllEvents(occupant.get());
-                }
-
-                world.moveEntity(this, nextPos);
-            }
-            return false;
-        }
     }
 
 }
