@@ -60,4 +60,9 @@ public class MinerNotFull extends AnimatedSchedule {
         return false;
     }
 
+    public <R> R accept(EntityVisitor<R> visitor)
+    {
+        return visitor.visit(this);
+    }
+
 }

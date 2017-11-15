@@ -39,4 +39,9 @@ public class OreBlob extends AnimatedSchedule {
         scheduler.scheduleEvent(this, createActivityAction(world, imageStore), nextPeriod);
     }
 
+    public <R> R accept(EntityVisitor<R> visitor)
+    {
+        return visitor.visit(this);
+    }
+
 }

@@ -169,12 +169,12 @@ final class WorldModel
       return Optional.empty();
    }
 
-   public Optional<EntityObjects> findNearest(Point pos, Class kind)
+   public Optional<EntityObjects> findNearest(Point pos, EntityVisitor kind)
    {
       List<EntityObjects> ofType = new LinkedList<>();
       for (EntityObjects entity : entities)
       {
-         if (kind.isInstance(entity))
+         if (kind.visit(entity))
          {
             ofType.add(entity);
          }

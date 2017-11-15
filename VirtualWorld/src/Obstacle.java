@@ -13,4 +13,9 @@ public class Obstacle extends EntityObjects {
         return new Obstacle(id, position, images);
     }
 
+    public <R> R accept(EntityVisitor<R> visitor)
+    {
+        return visitor.visit(this);
+    }
+
 }

@@ -23,4 +23,9 @@ public class Quake extends QuakeSchedule {
         world.removeEntity(this);
     }
 
+    public <R> R accept(EntityVisitor<R> visitor)
+    {
+        return visitor.visit(this);
+    }
+
 }

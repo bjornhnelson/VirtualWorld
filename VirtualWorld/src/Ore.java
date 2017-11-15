@@ -39,4 +39,9 @@ public class Ore extends DynamicSchedule {
         blob.scheduleActions(scheduler, world, imageStore);
     }
 
+    public <R> R accept(EntityVisitor<R> visitor)
+    {
+        return visitor.visit(this);
+    }
+
 }

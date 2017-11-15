@@ -13,4 +13,9 @@ public class Blacksmith extends EntityObjects {
         return new Blacksmith(id, position, images);
     }
 
+    public <R> R accept(EntityVisitor<R> visitor)
+    {
+        return visitor.visit(this);
+    }
+
 }
