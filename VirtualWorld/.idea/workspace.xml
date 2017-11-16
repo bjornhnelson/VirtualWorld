@@ -1,60 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f30d8b88-6588-49d4-930e-4909bc1f8fe2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AllFalseEntityVisitor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AnimatedSchedule.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/BlacksmithVisitor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DynamicObjects.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DynamicSchedule.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EntityVisitor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MinerFullVisitor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MinerNotFullVisitor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ObstacleVisitor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OreBlobVisitor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OreVisitor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PathingStrategy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuakeSchedule.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuakeVisitor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VeinVisitor.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/project/ActivityAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/project/Animated.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/project/AnimatedObjects.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/project/Background.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/project/Dynamic.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/project/EventComparator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/project/ImageStore.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/project/Viewport.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/project/VirtualWorld.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/project/WorldModel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/project/WorldView.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project/Event.class" afterPath="$PROJECT_DIR$/out/production/project/Event.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project/EventScheduler.class" afterPath="$PROJECT_DIR$/out/production/project/EventScheduler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Inheritance.graphml" afterPath="$PROJECT_DIR$/Inheritance.graphml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ActivityAction.java" afterPath="$PROJECT_DIR$/src/ActivityAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Animated.java" afterPath="$PROJECT_DIR$/src/Animated.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AnimatedObjects.java" afterPath="$PROJECT_DIR$/src/AnimatedObjects.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AnimationAction.java" afterPath="$PROJECT_DIR$/src/AnimationAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Background.java" afterPath="$PROJECT_DIR$/src/Background.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Blacksmith.java" afterPath="$PROJECT_DIR$/src/Blacksmith.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Dynamic.java" afterPath="$PROJECT_DIR$/src/Dynamic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity.java" afterPath="$PROJECT_DIR$/src/Entity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EntityObjects.java" afterPath="$PROJECT_DIR$/src/EntityObjects.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Event.java" afterPath="$PROJECT_DIR$/src/Event.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EventScheduler.java" afterPath="$PROJECT_DIR$/src/EventScheduler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Functions.java" afterPath="$PROJECT_DIR$/src/Functions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MinerFull.java" afterPath="$PROJECT_DIR$/src/MinerFull.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MinerNotFull.java" afterPath="$PROJECT_DIR$/src/MinerNotFull.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Obstacle.java" afterPath="$PROJECT_DIR$/src/Obstacle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ore.java" afterPath="$PROJECT_DIR$/src/Ore.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OreBlob.java" afterPath="$PROJECT_DIR$/src/OreBlob.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Quake.java" afterPath="$PROJECT_DIR$/src/Quake.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vein.java" afterPath="$PROJECT_DIR$/src/Vein.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VirtualWorld.java" afterPath="$PROJECT_DIR$/src/VirtualWorld.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/WorldModel.java" afterPath="$PROJECT_DIR$/src/WorldModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/WorldView.java" afterPath="$PROJECT_DIR$/src/WorldView.java" />
-    </list>
+    <list default="true" id="f30d8b88-6588-49d4-930e-4909bc1f8fe2" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -65,33 +12,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MinerNotFullVisitor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MinerNotFullVisitor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="62" lean-forward="false" selection-start-line="0" selection-start-column="62" selection-end-line="0" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="WorldModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/WorldModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="176" column="18" lean-forward="false" selection-start-line="176" selection-start-column="18" selection-end-line="176" selection-end-column="18" />
+            <state relative-caret-position="61">
+              <caret line="171" column="55" lean-forward="false" selection-start-line="171" selection-start-column="55" selection-end-line="171" selection-end-column="55" />
               <folding>
-                <marker date="1510721326925" expanded="true" signature="4700:5024" ph="{...}" />
+                <marker date="1510792173596" expanded="true" signature="4755:5079" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AllFalseEntityVisitor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AllFalseEntityVisitor.java">
+      <file leaf-file-name="VirtualWorld.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/VirtualWorld.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+            <state relative-caret-position="296">
+              <caret line="162" column="37" lean-forward="true" selection-start-line="162" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -100,8 +37,8 @@
       <file leaf-file-name="MinerFull.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MinerFull.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+            <state relative-caret-position="343">
+              <caret line="23" column="78" lean-forward="false" selection-start-line="23" selection-start-column="78" selection-end-line="23" selection-end-column="78" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -109,30 +46,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VeinVisitor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/VeinVisitor.java">
+      <file leaf-file-name="OreBlob.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OreBlob.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="405">
+              <caret line="27" column="65" lean-forward="false" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PathingStrategy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PathingStrategy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="44" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#906#913#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EntityVisitor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/EntityVisitor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="15" lean-forward="false" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Blacksmith.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Blacksmith.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="7" lean-forward="false" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BlacksmithVisitor.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/BlacksmithVisitor.java">
+      <file leaf-file-name="DynamicVisitor.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/DynamicVisitor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
@@ -141,23 +91,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EntityVisitor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/EntityVisitor.java">
+      <file leaf-file-name="MinerNotFull.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MinerNotFull.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="490">
+              <caret line="36" column="64" lean-forward="false" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MinerNotFull.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MinerNotFull.java">
+      <file leaf-file-name="Ore.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Ore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+            <state relative-caret-position="435">
+              <caret line="29" column="36" lean-forward="false" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1484#1485#0" expanded="true" />
+                <element signature="e#1526#1527#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -166,8 +120,8 @@
       <file leaf-file-name="Vein.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vein.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="46" column="5" lean-forward="false" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+            <state relative-caret-position="504">
+              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="46" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1506#1507#0" expanded="true" />
@@ -209,7 +163,6 @@
       <find>EntityObjects</find>
       <find>Dynamic</find>
       <find>Entity</find>
-      <find>instance</find>
       <find>instanc</find>
       <find>insta</find>
       <find>isInstanc</find>
@@ -219,6 +172,7 @@
       <find>isInstance</find>
       <find>instanceOf</find>
       <find>instanceof</find>
+      <find>instance</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -245,7 +199,6 @@
         <option value="$PROJECT_DIR$/src/ActivityAction.java" />
         <option value="$PROJECT_DIR$/src/EventScheduler.java" />
         <option value="$PROJECT_DIR$/src/ImageStore.java" />
-        <option value="$PROJECT_DIR$/src/VirtualWorld.java" />
         <option value="$PROJECT_DIR$/src/Background.java" />
         <option value="$PROJECT_DIR$/src/DynamicObjects.java" />
         <option value="$PROJECT_DIR$/src/DynamicSchedule.java" />
@@ -258,18 +211,12 @@
         <option value="$PROJECT_DIR$/src/Animated.java" />
         <option value="$PROJECT_DIR$/src/Event.java" />
         <option value="$PROJECT_DIR$/src/PathingStrategy.java" />
-        <option value="$PROJECT_DIR$/src/MinerNotFull.java" />
         <option value="$PROJECT_DIR$/src/Obstacle.java" />
-        <option value="$PROJECT_DIR$/src/Ore.java" />
-        <option value="$PROJECT_DIR$/src/OreBlob.java" />
         <option value="$PROJECT_DIR$/src/Quake.java" />
         <option value="$PROJECT_DIR$/src/Vein.java" />
         <option value="$PROJECT_DIR$/src/EntityVisitor.java" />
-        <option value="$PROJECT_DIR$/src/MinerFull.java" />
-        <option value="$PROJECT_DIR$/src/Entity.java" />
         <option value="$PROJECT_DIR$/src/Blacksmith.java" />
         <option value="$PROJECT_DIR$/src/BlacksmithVisitor.java" />
-        <option value="$PROJECT_DIR$/src/WorldModel.java" />
         <option value="$PROJECT_DIR$/src/MinerFullVisitor.java" />
         <option value="$PROJECT_DIR$/src/MinerNotFullVisitor.java" />
         <option value="$PROJECT_DIR$/src/ObstacleVisitor.java" />
@@ -278,8 +225,23 @@
         <option value="$PROJECT_DIR$/src/QuakeVisitor.java" />
         <option value="$PROJECT_DIR$/src/VeinVisitor.java" />
         <option value="$PROJECT_DIR$/src/AllFalseEntityVisitor.java" />
+        <option value="$PROJECT_DIR$/src/Entity.java" />
+        <option value="$PROJECT_DIR$/src/DynamicVisitor.java" />
+        <option value="$PROJECT_DIR$/src/EntitiesVisitor.java" />
+        <option value="$PROJECT_DIR$/src/OreBlob.java" />
+        <option value="$PROJECT_DIR$/src/MinerNotFull.java" />
+        <option value="$PROJECT_DIR$/src/MinerFull.java" />
+        <option value="$PROJECT_DIR$/src/Ore.java" />
+        <option value="$PROJECT_DIR$/src/VirtualWorld.java" />
+        <option value="$PROJECT_DIR$/src/WorldModel.java" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="840" />
@@ -303,9 +265,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -322,7 +285,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -467,25 +429,25 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21244635" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.119098715" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25438598" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26065162" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24937344" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -530,19 +492,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ActionInterface.java" />
-    <entry file="jar://$PROJECT_DIR$/processing-core.jar!/processing/core/PSurfaceNone.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="155" column="0" lean-forward="false" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/EntityInterface.java" />
     <entry file="file://$PROJECT_DIR$/src/ActionInterface.java" />
     <entry file="jar://$PROJECT_DIR$/processing-core.jar!/processing/core/PApplet.class">
@@ -576,22 +530,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Action.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ActivityAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AnimatedObjects.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -607,16 +545,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AnimatedSchedule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="50" column="31" lean-forward="false" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -710,26 +638,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OreBlob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" column="5" lean-forward="false" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1486#1487#0" expanded="true" />
-            <element signature="e#1528#1529#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Quake.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -737,17 +645,6 @@
           <folding>
             <element signature="e#883#884#0" expanded="true" />
             <element signature="e#925#926#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PathingStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#906#913#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -760,6 +657,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ActivityAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Background.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -768,31 +673,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity.java">
+    <entry file="file://$PROJECT_DIR$/src/BlacksmithVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="10" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MinerFullVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EntityObjects.java">
+    <entry file="file://$PROJECT_DIR$/src/MinerNotFullVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="30" column="43" lean-forward="true" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+        <state relative-caret-position="0">
+          <caret line="0" column="62" lean-forward="false" selection-start-line="0" selection-start-column="62" selection-end-line="0" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ObstacleVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="58" lean-forward="false" selection-start-line="0" selection-start-column="58" selection-end-line="0" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OreBlobVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="57" lean-forward="false" selection-start-line="0" selection-start-column="57" selection-end-line="0" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OreVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="53" lean-forward="false" selection-start-line="0" selection-start-column="53" selection-end-line="0" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/QuakeVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VeinVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Action.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Blacksmith.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#661#662#0" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VirtualWorld.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="160" column="29" lean-forward="false" selection-start-line="160" selection-start-column="29" selection-end-line="160" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -808,90 +767,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="44" column="5" lean-forward="false" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1484#1485#0" expanded="true" />
-            <element signature="e#1526#1527#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MinerFullVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ObstacleVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="58" lean-forward="false" selection-start-line="0" selection-start-column="58" selection-end-line="0" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OreVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="53" lean-forward="false" selection-start-line="0" selection-start-column="53" selection-end-line="0" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OreBlobVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="57" lean-forward="false" selection-start-line="0" selection-start-column="57" selection-end-line="0" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/QuakeVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vein.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="46" column="5" lean-forward="false" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1506#1507#0" expanded="true" />
-            <element signature="e#1548#1549#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VeinVisitor.java">
+    <entry file="file://$PROJECT_DIR$/src/Entity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MinerNotFullVisitor.java">
+    <entry file="file://$PROJECT_DIR$/src/AllFalseEntityVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="62" lean-forward="false" selection-start-line="0" selection-start-column="62" selection-end-line="0" selection-end-column="62" />
+          <caret line="0" column="58" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EntityObjects.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EntitiesVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="35" lean-forward="true" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AnimatedSchedule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MinerNotFull.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        <state relative-caret-position="490">
+          <caret line="36" column="64" lean-forward="false" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -900,51 +831,86 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MinerFull.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+        <state relative-caret-position="343">
+          <caret line="23" column="78" lean-forward="false" selection-start-line="23" selection-start-column="78" selection-end-line="23" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/WorldModel.java">
+    <entry file="file://$PROJECT_DIR$/src/Vein.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="176" column="18" lean-forward="false" selection-start-line="176" selection-start-column="18" selection-end-line="176" selection-end-column="18" />
+        <state relative-caret-position="504">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="46" selection-end-column="5" />
           <folding>
-            <marker date="1510721326925" expanded="true" signature="4700:5024" ph="{...}" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1506#1507#0" expanded="true" />
+            <element signature="e#1548#1549#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="36" lean-forward="false" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1484#1485#0" expanded="true" />
+            <element signature="e#1526#1527#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EntityVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="6" column="15" lean-forward="false" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AllFalseEntityVisitor.java">
+    <entry file="file://$PROJECT_DIR$/src/OreBlob.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Blacksmith.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="7" lean-forward="false" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+        <state relative-caret-position="405">
+          <caret line="27" column="65" lean-forward="false" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BlacksmithVisitor.java">
+    <entry file="file://$PROJECT_DIR$/src/PathingStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="44" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#906#913#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WorldModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="171" column="55" lean-forward="false" selection-start-line="171" selection-start-column="55" selection-end-line="171" selection-end-column="55" />
+          <folding>
+            <marker date="1510792173596" expanded="true" signature="4755:5079" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VirtualWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="162" column="37" lean-forward="true" selection-start-line="162" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DynamicVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />

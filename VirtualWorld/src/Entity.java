@@ -1,4 +1,4 @@
-public interface Entity extends EntityVisitor {
+public interface Entity{
 
     <R> R accept(EntityVisitor<R> visitor);
 

@@ -156,10 +156,11 @@ public final class VirtualWorld
    public static void scheduleActions(WorldModel world,
       EventScheduler scheduler, ImageStore imageStore)
    {
+      DynamicVisitor dynamicVisitor = new DynamicVisitor();
       for (EntityObjects entity : world.getEntities())
       {
-         if (entity instanceof Dynamic)
-             ((Dynamic)entity).scheduleActions(scheduler, world, imageStore); // FIX!!!
+         if (entity.accept(dynamicVisitor))
+             ((Dynamic)entity).scheduleActions(scheduler, world, imageStore);
       }
    }
 

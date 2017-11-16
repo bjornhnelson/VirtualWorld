@@ -18,7 +18,7 @@ public class OreBlob extends AnimatedSchedule {
 
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)
     {
-        Optional<EntityObjects> blobTarget = world.findNearest(getPosition(), Vein.class);  // check!
+        Optional<EntityObjects> blobTarget = world.findNearest(getPosition());  // check!
         long nextPeriod = getActionPeriod();
 
         if (blobTarget.isPresent())
