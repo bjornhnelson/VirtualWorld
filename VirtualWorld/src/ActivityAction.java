@@ -19,4 +19,8 @@ public class ActivityAction implements Action {
         entity.executeActivity(world, imageStore, scheduler);
     }
 
+    public static ActivityAction createActivityAction(DynamicObjects entity, WorldModel world, ImageStore imageStore)
+    {
+        return new ActivityAction(entity, world, imageStore, 0);
+    }
 }

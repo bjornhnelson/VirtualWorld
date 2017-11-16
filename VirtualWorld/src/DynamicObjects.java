@@ -14,11 +14,6 @@ public abstract class DynamicObjects extends EntityObjects implements Dynamic {
         return actionPeriod;
     }
 
-    protected ActivityAction createActivityAction(WorldModel world, ImageStore imageStore)
-    {
-        return new ActivityAction(this, world, imageStore, 0);
-    }
-
     public abstract void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler);
 
 }

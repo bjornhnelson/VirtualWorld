@@ -31,7 +31,7 @@ public class MinerFull extends AnimatedSchedule {
         else
         {
             scheduler.scheduleEvent(this,
-                    createActivityAction(world, imageStore),
+                    ActivityAction.createActivityAction(this, world, imageStore),
                     getActionPeriod());
         }
     }

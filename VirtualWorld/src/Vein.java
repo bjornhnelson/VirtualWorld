@@ -37,7 +37,7 @@ public class Vein extends DynamicSchedule {
         }
 
         scheduler.scheduleEvent(this,
-                createActivityAction(world, imageStore),
+                ActivityAction.createActivityAction(this, world, imageStore),
                 getActionPeriod());
     }
 

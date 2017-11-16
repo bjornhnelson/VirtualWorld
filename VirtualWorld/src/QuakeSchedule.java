@@ -14,10 +14,10 @@ public abstract class QuakeSchedule extends AnimatedObjects {
     public void scheduleActions(EventScheduler scheduler, WorldModel world, ImageStore imageStore) {
 
         scheduler.scheduleEvent(this,
-                createActivityAction(world, imageStore),
+                ActivityAction.createActivityAction(this, world, imageStore),
                 getActionPeriod());
         scheduler.scheduleEvent(this,
-                createAnimationAction(QUAKE_ANIMATION_REPEAT_COUNT),
+                AnimationAction.createAnimationAction(this, QUAKE_ANIMATION_REPEAT_COUNT),
                 getAnimationPeriod());
     }
 

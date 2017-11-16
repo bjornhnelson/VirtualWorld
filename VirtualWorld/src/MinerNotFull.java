@@ -37,7 +37,7 @@ public class MinerNotFull extends AnimatedSchedule {
                 !transformNotFull(world, scheduler, imageStore))
         {
             scheduler.scheduleEvent(this,
-                    createActivityAction(world, imageStore),
+                    ActivityAction.createActivityAction(this, world, imageStore),
                     getActionPeriod());
         }
     }

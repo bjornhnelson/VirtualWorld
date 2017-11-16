@@ -17,10 +17,6 @@ public abstract class AnimatedObjects extends DynamicObjects implements Animated
         return animationPeriod;
     }
 
-    protected AnimationAction createAnimationAction(int repeatCount) {
-        return new AnimationAction(this, null, null, repeatCount);
-    }
-
     public void nextImage() {
         int index = (getImageIndex() + 1) % getImages().size();
         setImageIndex(index);

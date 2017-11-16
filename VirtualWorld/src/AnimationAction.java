@@ -21,9 +21,13 @@ public class AnimationAction implements Action {
         if (repeatCount != 1)
         {
             scheduler.scheduleEvent(entity,
-                    entity.createAnimationAction(Math.max(repeatCount - 1, 0)),
+                    createAnimationAction(entity, Math.max(repeatCount - 1, 0)),
                     entity.getAnimationPeriod());
         }
+    }
+
+    public static AnimationAction createAnimationAction(AnimatedObjects entity, int repeatCount) {
+        return new AnimationAction(entity, null, null, repeatCount);
     }
 
 }

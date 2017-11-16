@@ -13,9 +13,9 @@ public abstract class AnimatedSchedule extends AnimatedObjects {
     public void scheduleActions(EventScheduler scheduler, WorldModel world, ImageStore imageStore) {
 
         scheduler.scheduleEvent(this,
-                createActivityAction(world, imageStore),
+                ActivityAction.createActivityAction(this, world, imageStore),
                 getActionPeriod());
-        scheduler.scheduleEvent(this, createAnimationAction(0),
+        scheduler.scheduleEvent(this, AnimationAction.createAnimationAction(this, 0),
                 getAnimationPeriod());
     }
 

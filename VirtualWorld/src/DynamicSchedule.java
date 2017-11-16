@@ -10,7 +10,7 @@ public abstract class DynamicSchedule extends DynamicObjects{
     public void scheduleActions(EventScheduler scheduler, WorldModel world, ImageStore imageStore) {
 
         scheduler.scheduleEvent(this,
-                createActivityAction(world, imageStore),
+                ActivityAction.createActivityAction(this, world, imageStore),
                 getActionPeriod());
     }
 
