@@ -65,4 +65,32 @@ public class MinerNotFull extends AnimatedSchedule {
         return visitor.visit(this);
     }
 
+    private boolean moveToEntity(WorldModel world, EntityObjects target, EventScheduler scheduler) {
+
+        if (getPosition().adjacent(target.getPosition()))
+        {
+                incrementResourceCount(1);
+                world.removeEntity(target);
+                scheduler.unscheduleAllEvents(target);
+            return true;
+        }
+        else
+        {
+            Point nextPos = nextPosition(world, target.getPosition());
+
+            if (!getPosition().equals(nextPos))
+            {
+                Optional<EntityObjects> occupant = world.getOccupant(nextPos);
+                if (occupant.isPresent())
+                {
+                    scheduler.unscheduleAllEvents(occupant.get());
+                }
+
+                world.moveEntity(this, nextPos);
+            }
+            return false;
+        }
+
+    }
+
 }

@@ -172,10 +172,10 @@ final class WorldModel
    public Optional<EntityObjects> findNearest(Point pos)
    {
       List<EntityObjects> ofType = new LinkedList<>();
-      EntitiesVisitor entitiesVisitor = new EntitiesVisitor();
+      OreVisitor oreVisitor = new OreVisitor();
       for (EntityObjects entity : entities)
       {
-         if (entity.accept(entitiesVisitor))
+         if (entity.accept(oreVisitor))
          {
             ofType.add(entity);
          }
