@@ -27,7 +27,7 @@ public abstract class AnimatedSchedule extends AnimatedObjects {
     protected Point nextPosition(WorldModel world, Point destPos) {
         SingleStepPathingStrategy pathStrategy = new SingleStepPathingStrategy();
 
-        Predicate<Point> canPassThrough = p -> !world.isOccupied(p);
+        Predicate<Point> canPassThrough = p -> !world.isOccupied(p) && world.withinBounds(p);
         BiPredicate<Point, Point> withinReach = (p1, p2) -> p1.adjacent(p2);
         Function<Point, Stream<Point>> potentialNeighbors = PathingStrategy.CARDINAL_NEIGHBORS;
 
