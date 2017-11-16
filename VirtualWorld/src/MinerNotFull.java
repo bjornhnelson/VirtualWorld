@@ -30,7 +30,7 @@ public class MinerNotFull extends AnimatedSchedule {
 
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)
     {
-        Optional<EntityObjects> notFullTarget = world.findNearest(getPosition(), new MinerNotFullVisitor());
+        Optional<EntityObjects> notFullTarget = world.findNearest(getPosition(), new OreVisitor());
 
         if (!notFullTarget.isPresent() ||
                 !moveToEntity(world, notFullTarget.get(), scheduler) ||
