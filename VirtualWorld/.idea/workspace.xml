@@ -6,6 +6,7 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SingleStepPathingStrategy.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project/ActivityAction.class" afterPath="$PROJECT_DIR$/out/production/project/ActivityAction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project/AnimatedObjects.class" afterPath="$PROJECT_DIR$/out/production/project/AnimatedObjects.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project/WorldModel.class" afterPath="$PROJECT_DIR$/out/production/project/WorldModel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ActivityAction.java" afterPath="$PROJECT_DIR$/src/ActivityAction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AnimatedObjects.java" afterPath="$PROJECT_DIR$/src/AnimatedObjects.java" />
@@ -45,10 +46,10 @@
       <file leaf-file-name="WorldModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/WorldModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="44" column="9" lean-forward="false" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+            <state relative-caret-position="-1716">
+              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding>
-                <marker date="1510856697475" expanded="true" signature="4715:5039" ph="{...}" />
+                <marker date="1510856804862" expanded="true" signature="4715:5039" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -112,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AnimatedSchedule.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AnimatedSchedule.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AnimatedSchedule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="29" column="93" lean-forward="true" selection-start-line="29" selection-start-column="93" selection-end-line="29" selection-end-column="93" />
+            <state relative-caret-position="435">
+              <caret line="29" column="76" lean-forward="false" selection-start-line="29" selection-start-column="76" selection-end-line="29" selection-end-column="76" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -134,11 +135,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PathingStrategy.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PathingStrategy.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PathingStrategy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+            <state relative-caret-position="360">
+              <caret line="24" column="50" lean-forward="true" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -218,7 +219,6 @@
         <option value="$PROJECT_DIR$/src/Functions.java" />
         <option value="$PROJECT_DIR$/src/Animated.java" />
         <option value="$PROJECT_DIR$/src/Event.java" />
-        <option value="$PROJECT_DIR$/src/PathingStrategy.java" />
         <option value="$PROJECT_DIR$/src/Obstacle.java" />
         <option value="$PROJECT_DIR$/src/Quake.java" />
         <option value="$PROJECT_DIR$/src/EntityVisitor.java" />
@@ -249,8 +249,9 @@
         <option value="$PROJECT_DIR$/src/OreBlob.java" />
         <option value="$PROJECT_DIR$/src/AnimatedObjects.java" />
         <option value="$PROJECT_DIR$/src/AStarPathingStrategy.java" />
-        <option value="$PROJECT_DIR$/src/WorldModel.java" />
         <option value="$PROJECT_DIR$/src/AnimatedSchedule.java" />
+        <option value="$PROJECT_DIR$/src/WorldModel.java" />
+        <option value="$PROJECT_DIR$/src/PathingStrategy.java" />
       </list>
     </option>
   </component>
@@ -864,16 +865,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PathingStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/EntityObjects.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -922,16 +913,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/WorldModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="44" column="9" lean-forward="false" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
-          <folding>
-            <marker date="1510856697475" expanded="true" signature="4715:5039" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AnimationAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -942,8 +923,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AnimatedSchedule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="29" column="93" lean-forward="true" selection-start-line="29" selection-start-column="93" selection-end-line="29" selection-end-column="93" />
+        <state relative-caret-position="435">
+          <caret line="29" column="76" lean-forward="false" selection-start-line="29" selection-start-column="76" selection-end-line="29" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WorldModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1716">
+          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <marker date="1510856804862" expanded="true" signature="4715:5039" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PathingStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="50" lean-forward="true" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
