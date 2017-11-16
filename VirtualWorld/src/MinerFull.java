@@ -21,7 +21,7 @@ public class MinerFull extends AnimatedSchedule {
 
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)
     {
-        Optional<EntityObjects> fullTarget = world.findNearest(getPosition());
+        Optional<EntityObjects> fullTarget = world.findNearest(getPosition(), new MinerFullVisitor());
 
         if (fullTarget.isPresent() &&
                 moveToEntity(world, fullTarget.get(), scheduler))
