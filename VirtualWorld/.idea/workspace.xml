@@ -83,8 +83,8 @@
       <file leaf-file-name="AStarPathingStrategy.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AStarPathingStrategy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-444">
-              <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+            <state relative-caret-position="621">
+              <caret line="84" column="8" lean-forward="false" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -940,8 +940,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AStarPathingStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-444">
-          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        <state relative-caret-position="621">
+          <caret line="84" column="8" lean-forward="false" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

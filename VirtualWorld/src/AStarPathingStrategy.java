@@ -81,8 +81,8 @@ public class AStarPathingStrategy implements PathingStrategy  {
 
             Point previousKey = closedList.get(current).getPrevious();
             current = closedList.get(previousKey).getPosition();
-
             }
+        
         return result;
     }
 
