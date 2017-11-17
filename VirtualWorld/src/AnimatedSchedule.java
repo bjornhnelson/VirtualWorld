@@ -23,7 +23,7 @@ public abstract class AnimatedSchedule extends AnimatedObjects {
                 getAnimationPeriod());
     }
 
-
+    /*
     protected Point nextPosition(WorldModel world, Point destPos) {
         SingleStepPathingStrategy pathStrategy = new SingleStepPathingStrategy();
 
@@ -40,6 +40,7 @@ public abstract class AnimatedSchedule extends AnimatedObjects {
             return getPosition();
         }
     }
+    */
 
 
     /*
