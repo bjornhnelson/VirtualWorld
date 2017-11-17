@@ -15,8 +15,8 @@ public class AStarPathingStrategy implements PathingStrategy  {
                                           Predicate<Point> canPassThrough,
                                           BiPredicate<Point, Point> withinReach,
                                           Function<Point, Stream<Point>> potentialNeighbors) {
-        LinkedList<Node> openList = new LinkedList<Node>();
-        LinkedList<Node> closedList = new LinkedList<Node>();
+        LinkedList<Node> openList = new LinkedList<>();
+        LinkedList<Node> closedList = new LinkedList<>();
 
         Node current = new Node(start, 0, heuristicDistance(start, end), heuristicDistance(start, end), null);
         openList.add(current);
