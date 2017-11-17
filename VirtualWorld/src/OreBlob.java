@@ -1,4 +1,5 @@
 import java.util.List;
+
 import processing.core.PImage;
 import java.util.Optional;
 import java.util.function.Predicate;
@@ -75,9 +76,11 @@ public class OreBlob extends AnimatedSchedule {
     }
 
     protected Point nextPosition(WorldModel world, Point destPos) {
+        //SingleStepPathingStrategy pathStrategy = new SingleStepPathingStrategy();
         AStarPathingStrategy pathStrategy = new AStarPathingStrategy();
 
-        Predicate<Point> canPassThrough = p -> world.withinBounds(p); // && (world.getOccupancyCell(p).accept();
+
+        Predicate<Point> canPassThrough = p -> world.withinBounds(p) && (world.getOccupant(p).equals(Optional.empty()) || world.getOccupant(p).equals(new OreVisitor()));
         BiPredicate<Point, Point> withinReach = (p1, p2) -> p1.adjacent(p2);
         Function<Point, Stream<Point>> potentialNeighbors = PathingStrategy.CARDINAL_NEIGHBORS;
 

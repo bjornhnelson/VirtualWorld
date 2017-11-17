@@ -98,7 +98,9 @@ public class MinerNotFull extends AnimatedSchedule {
     }
 
     protected Point nextPosition(WorldModel world, Point destPos) {
-        AStarPathingStrategy pathStrategy = new AStarPathingStrategy();
+        SingleStepPathingStrategy pathStrategy = new SingleStepPathingStrategy();
+        //AStarPathingStrategy pathStrategy = new AStarPathingStrategy();
+
 
         Predicate<Point> canPassThrough = p -> !world.isOccupied(p) && world.withinBounds(p);
         BiPredicate<Point, Point> withinReach = (p1, p2) -> p1.adjacent(p2);

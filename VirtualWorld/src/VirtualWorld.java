@@ -160,7 +160,7 @@ public final class VirtualWorld
       for (EntityObjects entity : world.getEntities())
       {
          if (entity.accept(dynamicVisitor))
-             ((Dynamic)entity).scheduleActions(scheduler, world, imageStore);
+            ((Dynamic)entity).scheduleActions(scheduler, world, imageStore);
       }
    }
 
