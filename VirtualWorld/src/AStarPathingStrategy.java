@@ -64,12 +64,12 @@ public class AStarPathingStrategy implements PathingStrategy  {
         return null;
     }
 
-    public static int heuristicDistance(Point p1, Point p2) {
+    private static int heuristicDistance(Point p1, Point p2) {
         int distance = Math.abs(p2.x - p1.x) + Math.abs(p2.y - p1.y);
         return distance;
     }
 
-    public List<Point> reconstructPath(Map<Point, Node> closedList, Point current) {
+    private static List<Point> reconstructPath(Map<Point, Node> closedList, Point current) {
         List<Point> result = new LinkedList<>();
         boolean continueRun = true;
 
