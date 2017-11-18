@@ -1,10 +1,8 @@
 import java.util.List;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import processing.core.*;
 import java.util.function.Function;
 import java.util.stream.Stream;
-import java.util.stream.Collectors;
 
 public class PathingMain extends PApplet
 {

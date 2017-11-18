@@ -75,10 +75,9 @@ public class OreBlob extends AnimatedSchedule {
         }
     }
 
-    protected Point nextPosition(WorldModel world, Point destPos) {
+    private Point nextPosition(WorldModel world, Point destPos) {
         //SingleStepPathingStrategy pathStrategy = new SingleStepPathingStrategy();
         AStarPathingStrategy pathStrategy = new AStarPathingStrategy();
-
 
         Predicate<Point> canPassThrough = p -> world.withinBounds(p) && (world.getOccupant(p).equals(Optional.empty()) || world.getOccupant(p).equals(new OreVisitor()));
         BiPredicate<Point, Point> withinReach = (p1, p2) -> p1.adjacent(p2);

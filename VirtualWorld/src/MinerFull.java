@@ -17,7 +17,7 @@ public class MinerFull extends AnimatedSchedule {
         this.resourceLimit = resourceLimit;
     }
 
-      public static MinerFull createMinerFull(String id, int resourceLimit,
+    public static MinerFull createMinerFull(String id, int resourceLimit,
                                             Point position, int actionPeriod, int animationPeriod, List<PImage> images)
     {
         return new MinerFull(id, position, images, resourceLimit, actionPeriod, animationPeriod);
@@ -81,10 +81,9 @@ public class MinerFull extends AnimatedSchedule {
 
     }
 
-    protected Point nextPosition(WorldModel world, Point destPos) {
+    private Point nextPosition(WorldModel world, Point destPos) {
         //SingleStepPathingStrategy pathStrategy = new SingleStepPathingStrategy();
         AStarPathingStrategy pathStrategy = new AStarPathingStrategy();
-
 
         Predicate<Point> canPassThrough = p -> !world.isOccupied(p) && world.withinBounds(p);
         BiPredicate<Point, Point> withinReach = (p1, p2) -> p1.adjacent(p2);

@@ -45,6 +45,4 @@ public class Node {
         return "Node: " + position + ", " + gScore + ", " + hScore + ", " + fScore + ", " + previous;
     }
 
-    // compareTo method
-
 }
