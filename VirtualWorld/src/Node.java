@@ -1,11 +1,11 @@
 public class Node {
     private Point position;
-    private Integer gScore;
-    private Integer hScore;
-    private Integer fScore;
+    private int gScore;
+    private int hScore;
+    private int fScore;
     private Point previous;
 
-    public Node(Point position, Integer startDistance, Integer heuristicDistance, Integer totalDistance, Point previous) {
+    public Node(Point position, int gScore, int hScore, int fScore, Point previous) {
         this.position = position;
         this.gScore = gScore;
         this.hScore = hScore;
@@ -20,11 +20,11 @@ public class Node {
     public int getGScore() { return gScore; }
 
     public int getHScore() {
-        return fScore;
+        return hScore;
     }
 
     public int getFScore() {
-        return hScore;
+        return fScore;
     }
 
     public Point getPrevious() {
@@ -32,13 +32,19 @@ public class Node {
     }
 
     public boolean equals(Object other) {
-        if (getClass() != other.getClass() || other == null) {
+        if (getClass() != other.getClass())
             return false;
-        }
+        if (other == null)
+            return false;
         Node n1 = (Node)other;
         return position.equals(n1.getPosition()) && gScore == n1.getGScore() && hScore == n1.getHScore()
                 && fScore == n1.getFScore() && previous.equals(n1.getPrevious());
     }
 
+    public String toString() {
+        return "Node: " + position + ", " + gScore + ", " + hScore + ", " + fScore + ", " + previous;
+    }
+
+    // compareTo method
 
 }

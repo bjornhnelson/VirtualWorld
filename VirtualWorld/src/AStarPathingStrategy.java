@@ -5,34 +5,24 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class AStarPathingStrategy implements PathingStrategy  {
+public class AStarPathingStrategy implements PathingStrategy {
 
     public List<Point> computePath(Point start, Point end,
-                                          Predicate<Point> canPassThrough,
-                                          BiPredicate<Point, Point> withinReach,
-                                          Function<Point, Stream<Point>> potentialNeighbors) {
+                                   Predicate<Point> canPassThrough,
+                                   BiPredicate<Point, Point> withinReach,
+                                   Function<Point, Stream<Point>> potentialNeighbors) {
         Map<Point, Node> openList = new HashMap<>();
         Map<Point, Node> closedList = new HashMap<>();
 
-        Node current = new Node(start, 0, heuristicDistance(start, end), heuristicDistance(start, end), null);
+        Node current = new Node(start, 0, start.heuristicDistance(end), start.heuristicDistance(end), null);
         openList.put(current.getPosition(), current);
 
         while (openList.size() > 0) {
 
-            Node minF = null;
-            for (Node n : openList.values()) {
-                if (minF == null)
-                    minF = n;
-                else if (n.getFScore() < minF.getFScore())
-                    minF = n;
+            if (withinReach.test(current.getPosition(), end)) {
+                List<Point> result = reconstructPath(closedList, current);
+                return result;
             }
-            current = minF;
-
-            if (withinReach.test(current.getPosition(), end))
-                return reconstructPath(closedList, current.getPosition());
-
-            openList.remove(current);
-            closedList.put(current.getPosition(), current);
 
             List<Point> adjacentPoints = potentialNeighbors.apply(current.getPosition()).filter(canPassThrough).collect(Collectors.toList());
             for (Point p : adjacentPoints) {
@@ -40,49 +30,46 @@ public class AStarPathingStrategy implements PathingStrategy  {
                 if (closedList.containsKey(p))
                     continue;
 
-                for (Node n : openList.values()) {
-                    if (!openList.containsValue(n))
-                        continue;
-
-                    else {
-                        Integer tentativeGScore = current.getGScore() + heuristicDistance(current.getPosition(), p);
-                        if (tentativeGScore > heuristicDistance(start, p))
-                            continue;
-                        Point a = p;
-                        Integer b = tentativeGScore;
-                        Integer c = heuristicDistance(p, end);
-                        Integer d = b + c;
-                        Point e = current.getPosition();
-
-                        Node addedNode = new Node(a, b, c, d, e);
-                        openList.put(a, addedNode);
-                    }
+                Point a = p;
+                int b = current.getGScore() + 1;
+                if (openList.containsKey(p)) {
+                    if (openList.get(p).getGScore() < b)
+                        b = openList.get(p).getGScore();
                 }
-
+                int c = p.heuristicDistance(end);
+                int d = b + c;
+                Point e = current.getPosition();
+                openList.put(a, new Node(a, b, c, d, e));
             }
+
+            openList.remove(current.getPosition());
+            closedList.put(current.getPosition(), current);
+
+            Node min = null;
+            for (Node n : openList.values()) {
+                if (min == null)
+                    min = n;
+                if (n.getFScore() < min.getFScore())
+                    min = n;
+            }
+            current = min;
         }
-        return null;
+        List<Point> emptyList = new LinkedList<>();
+        return emptyList;
     }
 
-    private static int heuristicDistance(Point p1, Point p2) {
-        int distance = Math.abs(p2.x - p1.x) + Math.abs(p2.y - p1.y);
-        return distance;
-    }
-
-    private static List<Point> reconstructPath(Map<Point, Node> closedList, Point current) {
+    private static List<Point> reconstructPath(Map<Point, Node> closedList, Node current) {
         List<Point> result = new LinkedList<>();
-        boolean continueRun = true;
 
-        while (continueRun) {
-            if (current == null)
-                continueRun = false;
-            else
-                result.add(0, current);
-
-            Point previousKey = closedList.get(current).getPrevious();
-            current = closedList.get(previousKey).getPosition();
+        boolean test = true;
+        while (test) {
+            if (current.getGScore() == 0) {
+                test = false;
+                continue;
             }
-
+            result.add(0, current.getPosition());
+            current = closedList.get(current.getPrevious());
+        }
         return result;
     }
 

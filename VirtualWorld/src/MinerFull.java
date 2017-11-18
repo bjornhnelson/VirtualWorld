@@ -82,8 +82,8 @@ public class MinerFull extends AnimatedSchedule {
     }
 
     protected Point nextPosition(WorldModel world, Point destPos) {
-        SingleStepPathingStrategy pathStrategy = new SingleStepPathingStrategy();
-        //AStarPathingStrategy pathStrategy = new AStarPathingStrategy();
+        //SingleStepPathingStrategy pathStrategy = new SingleStepPathingStrategy();
+        AStarPathingStrategy pathStrategy = new AStarPathingStrategy();
 
 
         Predicate<Point> canPassThrough = p -> !world.isOccupied(p) && world.withinBounds(p);

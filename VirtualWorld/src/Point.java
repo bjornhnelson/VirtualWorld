@@ -43,4 +43,9 @@ final class Point
               (y == p.y && Math.abs(x - p.x) == 1);
    }
 
+   public int heuristicDistance(Point p) {
+      int distance = Math.abs(p.x - x) + Math.abs(p.y - y);
+      return distance;
+   }
+
 }
