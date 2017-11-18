@@ -33,8 +33,9 @@ public class AStarPathingStrategy implements PathingStrategy {
                 Point a = p;
                 int b = current.getGScore() + 1;
                 if (openList.containsKey(p)) {
-                    if (openList.get(p).getGScore() < b)
+                    if (openList.get(p).getGScore() < b) {
                         b = openList.get(p).getGScore();
+                    }
                 }
                 int c = p.heuristicDistance(end);
                 int d = b + c;
