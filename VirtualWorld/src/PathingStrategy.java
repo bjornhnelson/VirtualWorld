@@ -27,4 +27,26 @@ interface PathingStrategy
                             .add(new Point(point.x - 1, point.y))
                             .add(new Point(point.x + 1, point.y))
                             .build();
+
+    static final Function<Point, Stream<Point>> DIAGONAL_NEIGHBORS =
+            point ->
+                    Stream.<Point>builder()
+                            .add(new Point(point.x - 1, point.y - 1))
+                            .add(new Point(point.x + 1, point.y + 1))
+                            .add(new Point(point.x - 1, point.y + 1))
+                            .add(new Point(point.x + 1, point.y - 1))
+                            .build();
+
+    static final Function<Point, Stream<Point>> DIAGONAL_CARDINAL_NEIGHBORS =
+            point ->
+                    Stream.<Point>builder()
+                            .add(new Point(point.x - 1, point.y - 1))
+                            .add(new Point(point.x + 1, point.y + 1))
+                            .add(new Point(point.x - 1, point.y + 1))
+                            .add(new Point(point.x + 1, point.y - 1))
+                            .add(new Point(point.x, point.y - 1))
+                            .add(new Point(point.x, point.y + 1))
+                            .add(new Point(point.x - 1, point.y))
+                            .add(new Point(point.x + 1, point.y))
+                            .build();
 }

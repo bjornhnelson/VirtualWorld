@@ -165,21 +165,24 @@ public class PathingMain extends PApplet
     {
         List<Point> points;
 
-        while (!neighbors(pos, goal))
-        {
+        //while (!neighbors(pos, goal))
+        //{
             points = strategy.computePath(pos, goalPos,
                     p ->  withinBounds(p, grid) && grid[p.y][p.x] != GridValues.OBSTACLE,
                     (p1, p2) -> neighbors(p1,p2),
                     PathingStrategy.CARDINAL_NEIGHBORS);
-            //DIAGONAL_NEIGHBORS);
-            //DIAGONAL_CARDINAL_NEIGHBORS);
+                    //PathingStrategy.DIAGONAL_NEIGHBORS);
+                    //PathingStrategy.DIAGONAL_CARDINAL_NEIGHBORS);
 
-            if (points.size() == 0)
+            if (points.size() == 0) {
+                System.out.println("No path found");
                 return false;
+            }
 
-            pos = points.get(0);
-            path.add(pos);
-        }
+            //pos = points.get(0);
+            //path.add(pos);
+        path.addAll(points);
+        //}
 
         return true;
     }
