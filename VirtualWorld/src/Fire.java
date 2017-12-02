@@ -10,7 +10,7 @@ public class Fire extends AnimatedSchedule {
 
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)
     {
-        this.scheduleActions(scheduler, world, imageStore);
+        scheduleActions(scheduler, world, imageStore);
     }
 
     public <R> R accept(EntityVisitor<R> visitor)
