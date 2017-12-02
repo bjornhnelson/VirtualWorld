@@ -19,6 +19,10 @@ final class WorldView
       this.viewport = new Viewport(numRows, numCols);
    }
 
+   public Viewport getViewport() {
+      return viewport;
+   }
+
    private void drawBackground()
    {
       for (int row = 0; row < viewport.getNumRows(); row++)

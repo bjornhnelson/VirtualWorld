@@ -8,11 +8,6 @@ public class Obstacle extends EntityObjects {
         super(id, position, images);
     }
 
-    public static Obstacle createObstacle(String id, Point position, List<PImage> images)
-    {
-        return new Obstacle(id, position, images);
-    }
-
     public <R> R accept(EntityVisitor<R> visitor)
     {
         return visitor.visit(this);

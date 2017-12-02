@@ -107,13 +107,13 @@ public final class VirtualWorld
       }
    }
 
-   public static Background createDefaultBackground(ImageStore imageStore)
+   private static Background createDefaultBackground(ImageStore imageStore)
    {
       return new Background(DEFAULT_IMAGE_NAME,
          imageStore.getImageList(DEFAULT_IMAGE_NAME));
    }
 
-   public static PImage createImageColored(int width, int height, int color)
+   private static PImage createImageColored(int width, int height, int color)
    {
       PImage img = new PImage(width, height, RGB);
       img.loadPixels();
@@ -139,7 +139,7 @@ public final class VirtualWorld
       }
    }
 
-   public static void loadWorld(WorldModel world, String filename,
+   private static void loadWorld(WorldModel world, String filename,
       ImageStore imageStore)
    {
       try
@@ -164,7 +164,7 @@ public final class VirtualWorld
       }
    }
 
-   public static void parseCommandLine(String [] args)
+   private static void parseCommandLine(String [] args)
    {
       for (String arg : args)
       {
@@ -181,6 +181,17 @@ public final class VirtualWorld
                break;
          }
       }
+   }
+
+   public void mousePressed()
+   {
+      Point pressed = new Point(mouseX/TILE_WIDTH, mouseY/TILE_HEIGHT);
+      Point pt = view.getViewport().viewportToWorld(pressed.x, pressed.y);
+      //if (!world.isOccupied(pressed))
+      //   Fire f = new Fire("fire", pt, imageStore.getImageList("fire"), 0, 0);
+      //   world.addEntity(f);
+         //System.out.println(pressed.x + "  " + pressed.y);
+      //redraw();
    }
 
    public static void main(String [] args)

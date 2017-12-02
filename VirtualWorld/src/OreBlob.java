@@ -10,15 +10,12 @@ import java.util.function.Function;
 public class OreBlob extends AnimatedSchedule {
 
     private static final String QUAKE_KEY = "quake";
+    private static final int QUAKE_ACTION_PERIOD = 1100;
+    private static final int QUAKE_ANIMATION_PERIOD = 100;
 
     public OreBlob(String id, Point position, List<PImage> images, int actionPeriod, int animationPeriod)
     {
         super(id, position, images, actionPeriod, animationPeriod);
-    }
-
-    public static OreBlob createOreBlob(String id, Point position, int actionPeriod, int animationPeriod, List<PImage> images)
-    {
-        return new OreBlob(id, position, images, actionPeriod, animationPeriod);
     }
 
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)
@@ -32,8 +29,9 @@ public class OreBlob extends AnimatedSchedule {
 
             if (moveToEntity(world, blobTarget.get(), scheduler))
             {
-                Quake quake = Quake.createQuake(tgtPos,
-                        imageStore.getImageList(QUAKE_KEY));
+                Quake quake = new Quake(QUAKE_KEY, tgtPos,
+                        imageStore.getImageList(QUAKE_KEY), QUAKE_ACTION_PERIOD,
+                        QUAKE_ANIMATION_PERIOD);
 
                 world.addEntity(quake);
                 nextPeriod += getActionPeriod();

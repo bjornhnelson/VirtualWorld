@@ -27,8 +27,9 @@ public class AStarPathingStrategy implements PathingStrategy {
             List<Point> adjacentPoints = potentialNeighbors.apply(current.getPosition()).filter(canPassThrough).collect(Collectors.toList());
             for (Point p : adjacentPoints) {
 
-                if (closedList.containsKey(p))
+                if (closedList.containsKey(p)) {
                     continue;
+                }
 
                 Point a = p;
                 int b = current.getGScore() + 1;
@@ -50,7 +51,7 @@ public class AStarPathingStrategy implements PathingStrategy {
             for (Node n : openList.values()) {
                 if (min == null)
                     min = n;
-                if (n.getFScore() < min.getFScore())
+                if (n.getFScore() <= min.getFScore())
                     min = n;
             }
             current = min;

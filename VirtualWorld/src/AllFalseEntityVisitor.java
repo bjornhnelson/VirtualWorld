@@ -8,4 +8,5 @@ public class AllFalseEntityVisitor implements EntityVisitor<Boolean> {
     public Boolean visit(OreBlob oreblob)  { return false; }
     public Boolean visit(Quake quake)  { return false; }
     public Boolean visit(Vein vein)  { return false; }
+    public Boolean visit(Fire fire)  { return false; }
 }

@@ -8,5 +8,6 @@ interface EntityVisitor<R> {
     R visit(OreBlob oreblob);
     R visit(Quake quake);
     R visit(Vein vein);
+    R visit(Fire fire);
 
 }

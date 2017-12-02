@@ -17,21 +17,15 @@ public class Vein extends DynamicSchedule {
         super(id, position, images, actionPeriod);
     }
 
-    public static Vein createVein(String id, Point position, int actionPeriod, List<PImage> images)
-    {
-        return new Vein(id, position, images, actionPeriod);
-    }
-
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)
     {
         Optional<Point> openPt = world.findOpenAround(getPosition());
 
         if (openPt.isPresent())
         {
-            Ore ore = Ore.createOre(ORE_ID_PREFIX + getId(),
-                    openPt.get(), ORE_CORRUPT_MIN +
-                            rand.nextInt(ORE_CORRUPT_MAX - ORE_CORRUPT_MIN),
-                    imageStore.getImageList(ORE_KEY));
+            Ore ore = new Ore(ORE_ID_PREFIX + getId(),
+                    openPt.get(), imageStore.getImageList(ORE_KEY),
+                    ORE_CORRUPT_MIN + rand.nextInt(ORE_CORRUPT_MAX - ORE_CORRUPT_MIN));
             world.addEntity(ore);
             ore.scheduleActions(scheduler, world, imageStore);
         }

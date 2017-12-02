@@ -17,11 +17,6 @@ public class Ore extends DynamicSchedule {
         super(id, position, images, actionPeriod);
     }
 
-    public static Ore createOre(String id, Point position, int actionPeriod, List<PImage> images)
-    {
-        return new Ore(id, position, images, actionPeriod);
-    }
-
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)
     {
         Point pos = getPosition();  // store current position before removing
@@ -29,12 +24,9 @@ public class Ore extends DynamicSchedule {
         world.removeEntity(this);
         scheduler.unscheduleAllEvents(this);
 
-        OreBlob blob = OreBlob.createOreBlob(getId() + BLOB_ID_SUFFIX,
-                pos, getActionPeriod() / BLOB_PERIOD_SCALE,
-                BLOB_ANIMATION_MIN +
-                        rand.nextInt(BLOB_ANIMATION_MAX - BLOB_ANIMATION_MIN),
-                imageStore.getImageList(BLOB_KEY));
-
+        OreBlob blob = new OreBlob(getId() + BLOB_ID_SUFFIX,
+                pos, imageStore.getImageList(BLOB_KEY), getActionPeriod() / BLOB_PERIOD_SCALE,
+                BLOB_ANIMATION_MIN + rand.nextInt(BLOB_ANIMATION_MAX - BLOB_ANIMATION_MIN));
         world.addEntity(blob);
         blob.scheduleActions(scheduler, world, imageStore);
     }

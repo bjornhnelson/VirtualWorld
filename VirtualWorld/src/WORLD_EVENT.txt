@@ -1,0 +1,12 @@
+1. How to trigger the event
+Text.
+
+2. What should happen when the event is triggered
+Text.
+
+3. What the affected entities should do
+Text.
+
+4. What the new entity is and how it should behave.
+Text.
+

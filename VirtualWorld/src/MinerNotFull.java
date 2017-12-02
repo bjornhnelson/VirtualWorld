@@ -20,14 +20,6 @@ public class MinerNotFull extends AnimatedSchedule {
         this.resourceCount = resourceCount;
     }
 
-    public static MinerNotFull createMinerNotFull(String id, int resourceLimit,
-                                                  Point position, int actionPeriod, int animationPeriod,
-                                                  List<PImage> images)
-    {
-        return new MinerNotFull(id, position, images,
-                resourceLimit, 0, actionPeriod, animationPeriod);
-    }
-
     private void incrementResourceCount(int value) {
         resourceCount += value;
     }
@@ -50,7 +42,7 @@ public class MinerNotFull extends AnimatedSchedule {
     {
         if (resourceCount >= resourceLimit)
         {
-            MinerFull miner = MinerFull.createMinerFull(getId(), resourceLimit, getPosition(), getActionPeriod(), getAnimationPeriod(), getImages());
+            MinerFull miner = new MinerFull(getId(), getPosition(), getImages(), resourceLimit, getActionPeriod(), getAnimationPeriod());
 
             world.removeEntity(this);
             scheduler.unscheduleAllEvents(this);

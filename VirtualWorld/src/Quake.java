@@ -12,11 +12,6 @@ public class Quake extends QuakeSchedule {
         super(id, position, images, actionPeriod, animationPeriod);
     }
 
-    public static Quake createQuake(Point position, List<PImage> images)
-    {
-        return new Quake(QUAKE_ID, position, images, QUAKE_ACTION_PERIOD, QUAKE_ANIMATION_PERIOD);
-    }
-
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)
     {
         scheduler.unscheduleAllEvents(this);

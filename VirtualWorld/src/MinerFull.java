@@ -17,12 +17,6 @@ public class MinerFull extends AnimatedSchedule {
         this.resourceLimit = resourceLimit;
     }
 
-    public static MinerFull createMinerFull(String id, int resourceLimit,
-                                            Point position, int actionPeriod, int animationPeriod, List<PImage> images)
-    {
-        return new MinerFull(id, position, images, resourceLimit, actionPeriod, animationPeriod);
-    }
-
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)
     {
         Optional<EntityObjects> fullTarget = world.findNearest(getPosition(), new BlacksmithVisitor());
@@ -42,7 +36,7 @@ public class MinerFull extends AnimatedSchedule {
 
     private void transformFull(WorldModel world, EventScheduler scheduler, ImageStore imageStore)
     {
-        MinerNotFull miner = MinerNotFull.createMinerNotFull(getId(), resourceLimit, getPosition(), getActionPeriod(), getAnimationPeriod(), getImages());
+        MinerNotFull miner = new MinerNotFull(getId(), getPosition(), getImages(), resourceLimit, 0, getActionPeriod(), getAnimationPeriod());
 
         world.removeEntity(this);
         scheduler.unscheduleAllEvents(this);

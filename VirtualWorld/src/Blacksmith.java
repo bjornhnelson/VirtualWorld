@@ -8,11 +8,6 @@ public class Blacksmith extends EntityObjects {
         super(id, position, images);
     }
 
-    public static Blacksmith createBlacksmith(String id, Point position, List<PImage> images)
-    {
-        return new Blacksmith(id, position, images);
-    }
-
     public <R> R accept(EntityVisitor<R> visitor)
     {
         return visitor.visit(this);
