@@ -187,11 +187,13 @@ public final class VirtualWorld
    {
       Point pressed = new Point(mouseX/TILE_WIDTH, mouseY/TILE_HEIGHT);
       Point pt = view.getViewport().viewportToWorld(pressed.x, pressed.y);
-      //if (!world.isOccupied(pressed))
-      //   Fire f = new Fire("fire", pt, imageStore.getImageList("fire"), 0, 0);
-      //   world.addEntity(f);
-         //System.out.println(pressed.x + "  " + pressed.y);
-      //redraw();
+      if (!world.isOccupied(pressed)) {
+         Fire f = new Fire("fire", pt, imageStore.getImageList("fire"), 110, 10);
+         world.addEntity(f);
+         System.out.println(pressed);
+         f.executeActivity(world, imageStore, scheduler);
+      redraw();
+      }
    }
 
    public static void main(String [] args)

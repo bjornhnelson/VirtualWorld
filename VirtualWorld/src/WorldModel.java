@@ -123,7 +123,7 @@ final class WorldModel
       }
    }
 
-   public EntityObjects getOccupancyCell(Point pos)
+   private EntityObjects getOccupancyCell(Point pos)
    {
       return occupancy[pos.y][pos.x];
    }
