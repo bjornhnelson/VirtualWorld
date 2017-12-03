@@ -1,12 +1,18 @@
 1. How to trigger the event
-Text.
+Click on any space in the world that is not occupied by another entity to trigger the event.
 
 2. What should happen when the event is triggered
-Text.
+When the event is triggered, a new Fire entity is spawned at the location of the mouse click.
+In addition, the background of all the cardinal and diagonal points surrounding the mouse click space will turn into grey squares to mark the location where the new fire originated.
 
 3. What the affected entities should do
-Text.
+If a MinerNotFull object is directly adjacent to a Fire object, they will use their special freeze ability to prevent themselves from being badly burned.
+This will cause them to change appearance, so they now look like an animated ice crystal.
+Now that they've used their special ability, they must move to the nearest Obstacle entity (space containing water) to collect more ice crystals from the lake, so they are prepared for future fires.
+Once the miner is directly adjacent to an Obstacle, their appearance will change back to a miner, and they will resume their previous activity (collecting ore).
+The miners use A* pathing for movement in both states (miner and ice crystal states).
 
 4. What the new entity is and how it should behave.
-Text.
+The Fire class represents the new entity. A Fire object finds the nearest MinerNotFull object, and uses A* pathing to move toward this miner.
+Once the Fire object is directly adjacent to the miner, it will disappear and be removed from the world, since the miner used their special freeze ability to extinguish the fire.
 

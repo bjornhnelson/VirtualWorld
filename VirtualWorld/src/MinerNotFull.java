@@ -40,6 +40,7 @@ public class MinerNotFull extends AnimatedSchedule {
         if (!target.isPresent() ||
            !moveToEntity(world, target.get(), scheduler, minerImages) ||
            !transformNotFull(world, scheduler, imageStore)) {
+                //scheduleActions(scheduler, world, imageStore);
                 scheduler.scheduleEvent(this,
                         ActivityAction.createActivityAction(this, world, imageStore),
                         getActionPeriod());
