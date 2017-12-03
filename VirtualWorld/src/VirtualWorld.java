@@ -191,10 +191,10 @@ public final class VirtualWorld
 
       if (!world.isOccupied(pt)) {
          world.alternateBackground(pt, noneBackground);
-         Fire f = new Fire("fire", pt, imageStore.getImageList("fire"), 5, 1000);
+         Fire f = new Fire("fire", pt, imageStore.getImageList("fire"), 200, 50);
          world.addEntity(f);
          //System.out.println(pt + "   " + pressed);
-         f.executeActivity(world, imageStore, scheduler);
+         f.scheduleActions(scheduler, world, imageStore);
       redraw();
       }
    }

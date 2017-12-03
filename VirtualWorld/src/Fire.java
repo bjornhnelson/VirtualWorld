@@ -23,11 +23,11 @@ public class Fire extends AnimatedSchedule {
         Optional<EntityObjects> target = world.findNearest(getPosition(), new MinerNotFullVisitor());  // check!
         List<PImage> freezeImages = imageStore.getImageList("freeze");
 
-        scheduleActions(scheduler, world, imageStore);
-
         if (target.isPresent()) {
             moveToEntity(world, target.get(), scheduler, freezeImages);
         }
+
+        scheduleActions(scheduler, world, imageStore);
     }
 
     private boolean moveToEntity(WorldModel world, EntityObjects target, EventScheduler scheduler, List<PImage> freeze) {
