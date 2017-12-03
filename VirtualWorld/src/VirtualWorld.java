@@ -189,11 +189,11 @@ public final class VirtualWorld
       Point pt = view.getViewport().viewportToWorld(pressed.x, pressed.y);
       Background noneBackground = new Background("none", imageStore.getImageList("none"));
 
-      if (!world.isOccupied(pressed)) {
+      if (!world.isOccupied(pt)) {
          world.alternateBackground(pt, noneBackground);
          Fire f = new Fire("fire", pt, imageStore.getImageList("fire"), 5, 1000);
          world.addEntity(f);
-         System.out.println(pressed);
+         //System.out.println(pt + "   " + pressed);
          f.executeActivity(world, imageStore, scheduler);
       redraw();
       }

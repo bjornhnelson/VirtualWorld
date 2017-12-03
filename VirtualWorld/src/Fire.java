@@ -36,7 +36,6 @@ public class Fire extends AnimatedSchedule {
         {
             target.setImages(freeze);
             target.setID("freeze");
-            //scheduler.unscheduleAllEvents(target); // freeze miners!!!!
             scheduler.unscheduleAllEvents(this);
             world.removeEntity(this);
             return true;
