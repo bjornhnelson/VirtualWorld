@@ -187,8 +187,11 @@ public final class VirtualWorld
    {
       Point pressed = new Point(mouseX/TILE_WIDTH, mouseY/TILE_HEIGHT);
       Point pt = view.getViewport().viewportToWorld(pressed.x, pressed.y);
+      Background noneBackground = new Background("none", imageStore.getImageList("none"));
+
       if (!world.isOccupied(pressed)) {
-         Fire f = new Fire("fire", pt, imageStore.getImageList("fire"), 110, 10);
+         world.alternateBackground(pt, noneBackground);
+         Fire f = new Fire("fire", pt, imageStore.getImageList("fire"), 5, 1000);
          world.addEntity(f);
          System.out.println(pressed);
          f.executeActivity(world, imageStore, scheduler);

@@ -1,10 +1,6 @@
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
+
 import processing.core.PImage;
-import java.util.Optional;
-import java.util.LinkedList;
-import java.util.List;
 
 final class WorldModel
 {
@@ -207,6 +203,17 @@ final class WorldModel
 
          return Optional.of(nearest);
       }
+   }
+
+   public void alternateBackground(Point pos, Background background) {
+      List<Point> points = Arrays.asList(new Point(pos.x + 1, pos.y), new Point(pos.x - 1, pos.y),
+                                  new Point(pos.x, pos.y + 1), new Point(pos.x, pos.y - 1),
+                                  new Point(pos.x - 1, pos.y + 1), new Point(pos.x - 1, pos.y - 1),
+                                  new Point(pos.x + 1, pos.y + 1), new Point(pos.x + 1, pos.y - 1));
+      for (Point p : points)
+         if (withinBounds(p)) {
+            setBackgroundCell(p, background);
+         }
    }
 
 }

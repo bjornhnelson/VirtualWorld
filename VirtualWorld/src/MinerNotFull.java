@@ -26,16 +26,24 @@ public class MinerNotFull extends AnimatedSchedule {
 
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)
     {
+        Optional<EntityObjects> target;
         Optional<EntityObjects> notFullTarget = world.findNearest(getPosition(), new OreVisitor());
+        Optional<EntityObjects> obstacleTarget = world.findNearest(getPosition(), new ObstacleVisitor());
+        List<PImage> minerImages = imageStore.getImageList("miner");
 
-        if (!notFullTarget.isPresent() ||
-                !moveToEntity(world, notFullTarget.get(), scheduler) ||
-                !transformNotFull(world, scheduler, imageStore))
-        {
-            scheduler.scheduleEvent(this,
-                    ActivityAction.createActivityAction(this, world, imageStore),
-                    getActionPeriod());
+        if (getId() == "freeze") {
+            target = obstacleTarget;
         }
+        else {
+            target = notFullTarget;
+        }
+        if (!target.isPresent() ||
+           !moveToEntity(world, target.get(), scheduler, minerImages) ||
+           !transformNotFull(world, scheduler, imageStore)) {
+                scheduler.scheduleEvent(this,
+                        ActivityAction.createActivityAction(this, world, imageStore),
+                        getActionPeriod());
+            }
     }
 
     private boolean transformNotFull(WorldModel world, EventScheduler scheduler, ImageStore imageStore)
@@ -61,13 +69,21 @@ public class MinerNotFull extends AnimatedSchedule {
         return visitor.visit(this);
     }
 
-    private boolean moveToEntity(WorldModel world, EntityObjects target, EventScheduler scheduler) {
+    private boolean moveToEntity(WorldModel world, EntityObjects target, EventScheduler scheduler, List<PImage> minerImages) {
+
+        ObstacleVisitor obstacleVisitor = new ObstacleVisitor();
 
         if (getPosition().adjacent(target.getPosition()))
         {
+            if (target.accept(obstacleVisitor)) {
+                setImages(minerImages);
+                setID("miner");
+            }
+            else {
                 incrementResourceCount(1);
                 world.removeEntity(target);
                 scheduler.unscheduleAllEvents(target);
+            }
             return true;
         }
         else

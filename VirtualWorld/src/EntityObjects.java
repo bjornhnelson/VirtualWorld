@@ -20,6 +20,10 @@ abstract class EntityObjects implements Entity {
         return id;
     }
 
+    protected void setID(String newID) {
+        id = newID;
+    }
+
     protected List<PImage> getImages() {
         return images;
     }
@@ -43,6 +47,10 @@ abstract class EntityObjects implements Entity {
     protected PImage getCurrentImage()
     {
         return images.get(imageIndex);
+    }
+
+    protected void setImages(List<PImage> newImages) {
+        images = newImages;
     }
 
 }
