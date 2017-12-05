@@ -20,7 +20,7 @@ public class Fire extends AnimatedSchedule {
 
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler)
     {
-        Optional<EntityObjects> target = world.findNearest(getPosition(), new MinerNotFullVisitor());  // check!
+        Optional<EntityObjects> target = world.findNearest(getPosition(), new MinerNotFullVisitor());
         List<PImage> freezeImages = imageStore.getImageList("freeze");
 
         if (target.isPresent()) {
@@ -37,8 +37,8 @@ public class Fire extends AnimatedSchedule {
             target.setImages(freeze);
             target.setID("freeze");
             target.setImageIndex(0);
-            scheduler.unscheduleAllEvents(this);
             world.removeEntity(this);
+            scheduler.unscheduleAllEvents(this);
             return true;
         }
         else
