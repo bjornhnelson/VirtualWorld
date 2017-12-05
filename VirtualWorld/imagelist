@@ -28,7 +28,6 @@ quake images/quake6.bmp 255 255 255 0
 rocks images/rock.bmp
 vein images/vein.bmp
 background_default images/none.bmp
-
 fire images/fire1.bmp 0 0 0 0
 fire images/fire2.bmp 0 0 0 0
 fire images/fire3.bmp 0 0 0 0
@@ -36,10 +35,8 @@ fire images/fire4.bmp 0 0 0 0
 fire images/fire5.bmp 0 0 0 0
 fire images/fire6.bmp 0 0 0 0
 fire images/fire7.bmp 0 0 0 0
-
 freeze images/freeze1.bmp 255 255 255 0
 freeze images/freeze2.bmp 255 255 255 0
 freeze images/freeze3.bmp 255 255 255 0
 freeze images/freeze4.bmp 255 255 255 0
-
-none images/none.bmp 0 0 0 0
+none images/none.bmp 255 255 255 0

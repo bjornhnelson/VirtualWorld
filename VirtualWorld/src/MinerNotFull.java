@@ -79,6 +79,7 @@ public class MinerNotFull extends AnimatedSchedule {
             if (target.accept(obstacleVisitor)) {
                 setImages(minerImages);
                 setID("miner");
+                setImageIndex(0);
             }
             else {
                 incrementResourceCount(1);

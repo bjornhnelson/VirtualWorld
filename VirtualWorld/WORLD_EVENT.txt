@@ -10,9 +10,10 @@ If a MinerNotFull object is directly adjacent to a Fire object, they will use th
 This will cause them to change appearance, so they now look like an animated ice crystal.
 Now that they've used their special ability, they must move to the nearest Obstacle entity (space containing water) to collect more ice crystals from the lake, so they are prepared for future fires.
 Once the miner is directly adjacent to an Obstacle, their appearance will change back to a miner, and they will resume their previous activity (collecting ore).
-The miners use A* pathing for movement in both states (miner and ice crystal states).
+The miners use A* pathing for movement in both states (miner and freeze states).
 
 4. What the new entity is and how it should behave.
 The Fire class represents the new entity. A Fire object finds the nearest MinerNotFull object, and uses A* pathing to move toward this miner.
 Once the Fire object is directly adjacent to the miner, it will disappear and be removed from the world, since the miner used their special freeze ability to extinguish the fire.
+A Fire object will still chase MinerNotFull objects in the freeze state, since the miners are still the same type of entity, even though they have a different appearance and behavior.
 
